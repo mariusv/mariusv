@@ -1,0 +1,187 @@
+---
+layout: post
+title: The Linux directory structure
+categories: 
+- directory
+- linux
+- Personal
+- Tutorials
+---
+
+Just open up a terminal and have a browse through these directories to get an idea of where everything is.
+
+
+
+*To Change to a Directory use:*
+
+@cd@
+
+*To LiSt what’s in it use:*
+
+@ls@
+
+To LiSt even the hidden files, ask for All:
+
+@ls -a@
+
+
+
+*What directories are there and what do they contain?*
+
+
+
+
+*/* – This is the root directory. Under windows, DOS, OS/2, and cousins, there’s a seperate root directory for each drive or partition. Linux and other Unix variants put everything in one directory tree, and this is at the base. There’s generally not much in here other than directories, although kernel images might be stored here too.
+
+
+
+*/boot* – Some distros store kernel images and other miscellaneous files needed to boot here.
+
+
+
+*/tmp* – Generally only temporary files needed at boot. Things that need temporary storage after boot generally use /var/tmp, but this isn’t universal by any means.
+
+
+
+*/mnt* – This is where directories go for mounting various miscellaneous filesystems. Sometimes, /cdrom and /floppy are used for mounting cdrom and floppy devices, but I’m not sure how many distros other than Debian do this. /mnt is also sometimes called /mount.
+
+
+
+
+*/lib* – Libraries needed at bootup. Libraries not needed at bootup but needed after the system is running should go in /usr/lib. Kernel modules generally go in /lib/modules/<kernel-version>.
+
+
+
+*/dev* – Device files go here. These are special files created by the Linux kernel that can be used by programs to control hardware devices. Note that network interfaces (eth0, ppp0, etc) don’t exist here.
+
+
+
+*/proc* – This filesystem doesn’t actually exist on disk. It contains files that provide information about the state of the computer, including info on running processes, hardware states, and memory usage. Most of the files aren’t easily read by humans, though.
+
+
+
+
+*/var* – Contains data changed when the system is running normally. /var/tmp, for example, should be used for storing temporary files. Various processes and daemons dump logs here, and some important subdirectores are:
+
+
+
+*/var/lock* – Lock files. These are created by programs when accessing a specific resource. They don’t actually prevent access, so respecting a lock file is more of a politeness thing. Most programs do respect them, and thus you don’t have to worry about them unless you’re writing a program.
+
+
+
+*/var/log* – Log files are generally written here. This directory may grow quite large, and so may require regular cleaning.
+
+
+
+*/var/run* – Contains various bits of runtime information.
+
+
+
+
+*/var/lib* – Contains various files needed while the system is running. One that will almost definitely be of interest to laptop users is /var/lib/pcmcia/stab, which contains some information about PCMCIA devices.
+
+
+
+*/var/spool* – Mail, news, and printer queues get stored here.
+
+
+
+*/root* – Home directory of the root user. Shouldn’t be much stored here at all, as you should be using normal, unprivilaged users for anything that doesn’t require root privilages.
+
+
+
+*/home* – This contains the home directories of most of the users on the system. You can type cd to return to your home directory, and you can use ~/ as a shortcut to refer to your home directory. Personal config and data files for normal users go here.
+
+
+
+
+*/etc* – Probably where you’ll spend most of your time as root, this is where most system-wide configuration files are stored. Files for specific users are almost always stored in the user’s home directory. The contents will vary depending on what you’ve got installed, but some subdirectories that are probably of interest are listed below.
+
+
+
+*/etc/X11* – This is where system-wide X11 configuration files are stored. XF86Config stores data used by the server to set up the environment. /etc/X11/fonts is where the fonts used by the server are stored, and window managers generally create subdirectories for their config files.
+
+
+
+*Boot related stuff for Debian:*
+
+
+
+*/etc/init.d* – Debian stores the actual scripts for starting daemons and services here. Not all of these are necessarily started at boot time, so don’t remove any unless you’re absolutely sure its safe. Most are created and removed by their associated packages, so you’ll rarely have to do anything here.
+
+
+
+
+*/etc/rcS.d* – These are soft links to scripts in /etc/init.d that are run during startup no matter what runlevel the system’s booting into. The files start with an S followed by two digits – services are started in an order determined by these two digits. For example, S24foo is started before S42bar. The rest of the filename should be the name of the file in /etc/init.d the file is linked to.
+
+
+
+*/etc/rc0.d through /etc/rc6.d* – These are soft links, just like in /etc/rcS.d, except they’re only executed when entering the specified runlevel. 0 is shutdown and 6 is reboot. Anything starting with a K shuts down a process, and anything starting with an S starts one. Other than that, they follow the same rules as /etc/rcS.d. By default, as far as I can tell, Debian boots into runlevel 2.
+
+
+
+*/bin* and */sbin* – Programs and system programs needed when the system is booting, respectively. Most are also useful after the system boots up, but they’re put here because they’re generally needed before any other programs.
+
+
+
+
+*/usr* – Unix System Resources. This is the really big directory. Almost everything goes under here, unless I mentioned it above, so I’m going to go into quite a bit of detail about subdirectories and so on.
+
+
+
+*usr/X11* – These are files used by X11, and the files under them are structured like the /usr directory.
+
+
+
+*/usr/bin* – Binary files (program executables) that aren’t needed during boot go here. This is probably where most of the programs you use during normal system operation reside.
+
+
+
+*/usr/sbin* – These are system programs not needed during boot.
+
+
+
+
+*/usr/games* – Game programs and (sometimes) data files and configuration stuff.
+
+
+
+*/usr/include* – C and C++ header files. Probably not of much interest to you unless you’re into programming with C and/or C++.
+
+
+
+*/usr/lib* – Library and shared library files not needed at bootup.
+
+
+
+*/usr/info* – Data files needed by the GNU info program.
+
+
+
+
+*/usr/man* – Data files needed by the man program.
+
+
+
+*/usr/src* – Source code files. The linux kernel source is usually in /usr/src/linux.
+
+
+
+*/usr/doc* – Documentation files go under here. There’s probably quite a lot here, and there are quite a few programs that just put copyright and changelog files here and document themselves through man or info. Of particular interest is the HOWTO directory where (probably) your distribution has placed a collection of HOWTOs from http://www.linuxdoc.org. These aren’t quite as simplified as NHFs, but they’re still quite good.
+
+
+
+(The perceptive will notice that most directories in /usr/doc are actually links to the real location of the documentation…)
+
+
+
+
+*/usr/local* – This directory contains things that are specific to the local system. Really only takes on any meaning if /usr is being mounted from a remote machine, VIA smb or nfs or some other networking filesystem. In that case, /usr/local would be a partition on the local machine, and the machine’s user would put their programs there. This directory is usually structured like the /usr tree is.
+
+
+
+*/usr/shared* – Shared files for programs go here. What a program puts here is, as far as I can tell, pretty much arbitrary, but sound files seem to be a fairly common thing to put here.
+
+
+
+That’s all the major directories I could pick out of my filesystem. If I’ve made any mistakes, left anything out, or whatever E-Mail me at the above address and I’ll be glad to try and include it.</kernel-version>

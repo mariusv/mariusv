@@ -1,0 +1,13 @@
+---
+layout: post
+title: Back from FLOSSCamp 2010
+permalink: http://www.mariusv.com/back-from-flosscamp-2010/index.html
+post_id: 357
+categories: 
+- FLOSSCamp
+- freedom
+- montains
+- Personal
+---
+
+I am back home after <a href="http://camp.softwareliber.ro">FLOSSCamp 2010</a> and swamped with work, having to prepare a lot of servers, updates and shit. But tomorrow I go to montains :D so BBL in 6 days .

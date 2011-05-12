@@ -1,0 +1,30 @@
+---
+layout: post
+title: Root Login Email Notification
+categories: 
+- email
+- linux
+- root login
+- sudo
+- Tutorials
+- ubuntu
+---
+
+Configuring your server so that when someone logs in with root or su, your server will notify you via email.
+
+Please use an email address that is *NOT* hosted on your server as a hacker could merely delete the emails right off the server.
+
+Login to your server with root
+
+Use any editor to edit .bash_profile
+
+At the end of the file, place the following lines:
+
+
+
+<pre>echo ‘WARNING – Root Login detected on:’ `date` `who` | mail -s “WARNING -
+Root Login: `who | awk ‘{print $6}’`” youremail@domain.com</pre>
+
+
+
+Now anytime someone gains root access you will be notified via email.

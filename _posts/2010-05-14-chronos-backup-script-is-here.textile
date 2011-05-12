@@ -1,0 +1,14 @@
+---
+layout: post
+title: CHRONOS backup script is HERE
+categories: 
+- backup
+- Bash scripts
+- chronos
+- script
+---
+
+Finally i had some time to finish my backup script...you can find sources and the script in the link...I wait for your feedback :D
+
+
+<a href="http://github.com/mariusv/Backup-script">CHRONOS v3.0</a>

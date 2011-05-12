@@ -1,0 +1,113 @@
+---
+layout: post
+title: 101 Reasons why you can't find your system administrator
+permalink: http://www.mariusv.com/101-reasons-why-you-cant-find-your-system-administrator/index.html
+post_id: 830
+categories: 
+- fun
+- Personal
+- sysadmin
+---
+
+   1. They are hiding under the stairs
+   2. They are on holiday for the first time in 5 years
+   3. They are in the cellars conducting the rituals to keep the machines running
+   4. They are in hospital suffering from an overdose of caffeine
+   5. Taken away by the police after killing the last user who asked a stupid question
+   6. You *have* a system administrator ?
+   7. You walked past the table they were gibbering under
+   8. The Sysadmin has built a maze with the door to their office at the center
+   9. You *are* the system administrator
+  10. You missed seeing the system administrator asleep under their desk
+  11. The admin is chained to their desk in a dungeon only the CEO has the key for
+  12. The admin's off explaining to the management why they need an assistant.
+  13. The admin is suffering so bad from sleep deprivation that they may as well not be there for all the sense you can make of the words they are saying.
+  14. You are afraid that the admin will use you as a punch bag so you are searching for them, but desperately pray that you don't find them.
+  15. The admin came to work disguised as a tea boy to avoid talking to users
+  16. The admin electrocuted themselves whilst installing some cabling near the main power cable. Since the admin's body is the only thing keeping the power flowing, the management boarded up the body and pretended they still had a system administrator
+  17. The admin is stuck in a lift shaft pulling network cable to another floor
+  18. The admin is getting Jolt out of their under-floor cache
+  19. The admin is hiding on the roof
+  20. The admin is looking up the BOFH excuse of the day.
+  21. The admin is out buying some caffeine.
+  22. The admin is busy installing xfishtank on the main file server.
+  23. The admin is out buying refills for the Nerf(TM) crossbow.
+  24. The admin is locked in the computer room playing Deathmatch.
+  25. The admin is booted to DOS and is playing doom across the network.
+  26. The admin went to Stop&Go to get ANOTHER case of insert favorite caffeinated beverage here
+  27. The admin went to the room with padded walls that nobody dares open when the door's closed
+  28. The admin managed to find time to sleep for an hour or two
+  29. The admin just found out he had a two-month-old child, and is getting re-acquainted with his SO (and the new child)
+  30. The admin is playing netrek
+  31. The admin is in the hospital after being severely injured by a falling soda can mountain
+  32. The admin is closeted with boss trying to explain why (s)he uploaded a user to seven.rings.of.hell.com
+  33. The admin is at the hospital having his/her fingers splinted after typing 100 times "NO, you cannot use your old address after our domain name changes. Please go read the announcements that we have been posting for the last three months."
+  34. The admin is catching twenty winks under the floorboards, tread gingerly
+  35. The admin is watching the building electrician trip a circuit breaker that will reduce the company 'frame to rainbow-colored slag
+  36. The admin is out by the turnpike waiting for a case of Jolt to bounce out of the truck after it hits the speed bump
+  37. The admin is out back beating a luser into corn mash who asked "When will the system be back up" one time too many
+  38. The admin finished a double shift and is out back wondering what that big burning ball in the sky is
+  39. The admin is busy packing up to go to a site that has contemporary hardware
+  40. The admin is engaged in a staring contest with a pack of evil dogs
+  41. The admin is on the phone trying to talk his wife out of buying a house without ISDN
+  42. The admin is sitting under the desk, hysterical at what the (l)user just asked
+  43. The admin is at the pub, it's all *too* much
+  44. The admin is standing behind you, holding an axe
+  45. The admin resigned in disgust five minutes ago
+  46. The admin is in a meeting with the boss to discuss poor user response times
+  47. Just look up at the ceiling (Think 'Aliens')
+  48. The admin can't be reached via phone or e-mail because (s)he is too busy on Usenet telling everybody how busy (s)he is or thinking up 101 reasons why (s)he can't be found
+  49. The admin is hiding under a table so that (s)he will not be the one sitting for hours watching Ultrix reinstall from a single-speed CDROM because the users who inexplicably have root access have destroyed the file system *again* during a misguided attempt to "improve" /etc/rc by repartitioning the disk at boot time "so that it doesn't forget".
+  50. We have a 'secure room' here - bloody great lock on it. I hide in there
+  51. The Grey Wall(tm) has fallen on them and no one has noticed their absence. [clunk....clunk...help!....anyone?]
+  52. They've gone to find some more coffee. Sysadmin has left the building!
+  53. They've snapped, started muttering about "this damned post office", and left for the nearest gun store
+  54. They're out on an interview
+  55. They're seeing a therapist who doesn't have any computers in their office, a non-threatening place
+  56. They've gone to a computer museum to beg for parts for the PDP-10s running the place (ala Compuserve)
+  57. They're out looking for an ad in any media where DEC mentions OpenVMS
+  58. They're planning where to be on 01/01/2000, when all of the MVS systems, and some older minis in mission-critical applications like process control turn to crap. They may be shopping for a bomb shelter if SAC's launch control systems only have a two-digit year.
+  59. They're at a travel agent's, booking a vacation to friendlier place, like Iraq
+  60. They're out fomenting rumors that the Windows 95 cd-roms have the Church of Scientology's copyrighted teachings hidden on the disk
+  61. They're meeting with Guido, to put out a contract on the parties that started the open systems myth
+  62. They've gone to Oklahoma City, to enroll in the FAA's Air Traffic Controller training program, to start a less-stressful career
+  63. They're seeing a commodities broker, to arrange direct deposit of their paychecks into buying coffee bean futures.
+  64. /pub/lunch
+  65. Look better. He/She is probably in the basement somewhere behind the modem racks
+  66. The admin finally took a day off
+  67. It's 9 AM. He/she is not working that late.
+  68. Vendor demonstration
+  69. Convenience store across the street opened
+  70. Pizza delivery is at the front door
+  71. The admin is sleeping under the floor tiles
+  72. The admin is on some floor, in some wiring closet, trying to fix things
+  73. The admin is in the dumpster behind the building trying to get rid of some frustration by using a sledgehammer on the Macs
+  74. The trauma induced by repeated attempts to install Solaris 2.5 pre-beta on an Intel system has forced him to seek psychotherapy
+  75. The admin is still trying to come down from inhaling too much tape head cleaner
+  76. The admin is out chasing the rodents off of the twisted pair/power lines
+  77. The admin has gone home to sleep (1st time in x days)
+  78. The admin has been convicted of computer crimes
+  79. What was your username?
+  80. The admin is emptying the bit buckets
+  81. They finally caught him/her for that big site-massacre (s)he thought (s)he'd gotten away with
+  82. ObReason n+x: Your system administrator is walking in circles outside saying "TUESDAY? They want it by TUESDAY? TUESDAY?"
+  83. rcp $FAV_RESTAURANT:$FAV_FOOD /dev/stomach
+  84. The admin is hiding in wiring closet
+  85. The admin is outside having a smoke because it's illegal in the building
+  86. The admin is on the roof of the building, contemplating jumping
+  87. The admin is on the roof of the building, contemplating which users to throw off
+  88. The admin is on the roof of the building, contemplating traffic
+  89. The admin is on the roof of the building, contemplating
+  90. The admin is in his/her manager's office, trying to explain why the manager gets lots of calls from lusers who can't find the Sysadmin
+  91. The admin is in his/her manager's office, trying to explain why the "real" (programming) work doesn't get done. Manager doesn't understand -- when he gave you this job, he said it would only take a couple of hours a week....
+  92. The admin is in luser's office, trying to explain why "export VAR=xxx" from one xterm window doesn't have any effect on the other windows. "But they're all on the same Xstation -- what's the problem?"
+  93. The admin is down in the administrative offices fixing one of their DOS boxes
+  94. The admin is out getting a caffeine fix
+  95. There's more caffeine than blood in his veins, and he was last seen hopping down the hall pretending he was a pogo stick
+  96. The admin is too busy playing with the Web
+  97. ...reading news
+  98. ...sleeping
+  99. ...reading other peoples email (not that I do this...)
+ 100. ...installing the latest Xgame on the main fileserver (this is real cool) 
+
+Source : <a href="http://home.xnet.com/~raven/Sysadmin/FindSysAdmin.html">Sysadmin</a>

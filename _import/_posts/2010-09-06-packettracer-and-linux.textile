@@ -1,0 +1,36 @@
+---
+layout: post
+title: PacketTracer and Linux
+permalink: http://www.mariusv.com/packettracer-and-linux/index.html
+post_id: 425
+categories: 
+- CISCO
+- packetracer
+- Tutorials
+---
+
+p. There is a bug with PacketTracer which seems relatively minor but can cause a lot of frustration to users.
+
+
+p. *Take me for example:* The first day in class we were given a review packet tracer file to work on. I forgot to save and when I finally remembered it bit me in the but! I went to save my work and PacketTracer crashed! I lost everything.
+
+
+p. *Issue:* PacketTracer 5.2.1 crashes / segfaults on linux when saving files.
+
+
+p. *Reason:* PacketTracer 5.2.1&nbsp; is built against Qt 4.4.3.&nbsp; However, it is using the system version of Qt which is likely newer. In my case, I’m using Qt 4.5.3. Many other distributions also use 4.5.3. It appears that there has been a code change between Qt 4.4.3 and 4.4.5; therefore, making 4.4.5 incompatible with PT 5.2.1.
+
+
+
+p. *Solution:* Have&nbsp;PacketTracer use the qt libs that it ships with.
+
+This&nbsp; can be accomplished with the use of LD_LIBRARY_PATH and a shell script.
+
+
+
+<pre lang="bash">#!/bin/sh
+export LD_LIBRARY_PATH="/opt/pt/lib"
+/opt/pt/bin/PacketTracer5</pre>
+
+Adjust the paths as necessary, save the file, and make it executable.
+PT might not look as nice and pretty, but it won’t crash!

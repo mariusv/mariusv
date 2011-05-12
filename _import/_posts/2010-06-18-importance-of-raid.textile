@@ -1,0 +1,48 @@
+---
+layout: post
+title: Importance of RAID
+permalink: http://www.mariusv.com/importance-of-raid/index.html
+post_id: 191
+categories: 
+- harddisk
+- hdd
+- RAID
+- servers
+- Technology
+---
+
+Redundant Array of Independent Disks (RAID) is a key technology to mission critical / business servers which aim for the highest possible uptime on their servers. While S.M.A.R.T. (Self-Monitoring, Analysis, and Reporting Technology) hard disk technology can warn of an impending disk failure, there is no guarantee that it will give any sort of warning before a total failure.
+
+With a single hard disk in your server, you run a high risk of being a victim of:
+
+Data Loss (Complete if No Backups)
+Certain Downtime
+Having a RAID configuration setup on your servers however, can significantly lower the risk. With an RAID configuration you commonly have two or more hard disks in your system, where if one drive fails the system stays online with no data loss or downtime while your failed hard disk is replaced (with the exception of RAID 0).
+
+*Common RAID Levels*
+
+RAID 0
+RAID 1
+RAID 5
+RAID 10
+
+	*<li>RAID 0</li>*
+
+
+For the purposes of this article, this RAID array is worthless, as it provides no redundancy. Benefits of RAID 0 are high read and write performance, and while the full disk capacity may be used, a single drive failure will have the same effect of a single drive â€“ data loss. Requires at least two hard disks.
+
+	*<li>RAID 1</li>*
+
+Requires at least two hard disks. Read performance is often improved, while write performance is comparable to a single drive. This RAID level is most commonly used as it provides disk mirroring and is usually the cheapest method to achieve hard disk redundancy. Can sustain up to one half of the RAID array failing. Only half of the total disk capacity can be used. (ie: 250 GB x 2 Hard Disks, 250 GB Usable)
+
+	*<li>RAID 5</li>*
+
+Requires at least three hard disks. This level of RAID provides high read performance and low write performance. This RAID level is often used for itâ€™s price effectiveness, as it allows redundancy without the fifty percent loss of space. However, one drive failure can cause a substantial decrease in performance even after the RAID array has been rebuilt. Only one disk can fail. The capacity of one drive will be unusable. (ie: 250 GB x 3 Hard Disks, 500 GB Usable)
+
+	*<li>RAID 10</li>*
+
+Requires at least four hard disks. This level of RAID is often used for high performance purposes, as it provides high read performance and write performance. Often used for applications needing high input and output disk performance such as MySQL. It is a RAID 1 + 0 configuration, which means it has the performance benefits of a RAID 0 configuration, but at the same time the redundancy of a RAID 1 configuration. Up to half the total disks can fail. Only half of the total disk capacity can be used. (ie: 250 GB x 4 Hard Disks, 500 GB Usable)
+
+In summary, I often recommend customers to go with an RAID 1 configuration, as it is simply the easiest way to acquire redundant disk operations while minimizing the costs associated with disk redundancy. RAID 5 is often recommended to clients that have high space requirements, but desire some form of redundancy in their setup. RAID 10 on the other hand is recommended for itâ€™s high performance characteristics.
+
+Let me stress however that even if you do have an RAID configuration on your server, your ultimate fallback solution would still be your daily / weekly / monthly backups. The fact of life is that hard disks fail, but RAID is still your best chance at significantly lowering the risk of being a victim of data loss and downtime due to hard disk failures.

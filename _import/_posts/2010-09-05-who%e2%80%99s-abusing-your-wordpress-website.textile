@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Who\xE2\x80\x99s abusing your Wordpress website?"
+permalink: "http://www.mariusv.com/who\xE2\x80\x99s-abusing-your-wordpress-website/index.html"
+post_id: 421
+categories: 
+- abuse
+- Personal
+- wordpress
+---
+
+I wanted to know what IP addresses were hitting my website. I’d done this before and it only took a moment or two to recreate the following commands. Still, here it is for future reference:
+
+@grep -v "wp-content" access.log|grep -v wp-includes|cut -f 1 -d " "|sort|uniq -c|sort -nr|less@
+
+p. This code:
+
+
+<ul>
+<li> Excludes “wp-content” and “wp-includes” requests.</li>
+<li> Uses “cut” to cut out the IP address.</li>
+<li> Sorts the list of IP addresses.</li>
+
+<li> Uses “uniq” to count the occurrence of each IP.</li>
+<li> And finally reverse sorts the list again, by number of occurrences, with the largest number at the top.</li>
+</ul>
+p. You’ll probably find Google and Yahoo! bots near the top of the list, but I also found the “Jyxobot/1″ bot was quite busy today.
+

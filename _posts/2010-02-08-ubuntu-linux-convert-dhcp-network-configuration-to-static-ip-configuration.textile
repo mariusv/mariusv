@@ -1,0 +1,161 @@
+---
+layout: post
+title: Ubuntu Linux convert DHCP network configuration to static IP configuration
+categories: 
+- dhcp
+- ip
+- network
+- ubuntu
+---
+
+My friend wanted to know how to change or convert DHCP network configuration to static configuration. After initial installation, he wanted to change network settings. Further, his system is w/o GUI system aka X Windows. Here is quick way to accomplish the same:
+
+Your main network configuration file is <span style="color: rgb(102, 51, 0);">/etc/network/interfaces</span>
+
+Desired new sample settings:
+<pre> Host IP address 192.168.1.100
+ Netmask: 255.255.255.0
+ Network ID: 192.168.1.0
+ Broadcast IP: 192.168.1.255
+ Gateway/Router IP: 192.168.1.254
+ DNS Server: 192.168.1.254</pre>
+
+Open network configuration file
+
+<pre>$ sudo vi /etc/network/interfaces</pre>
+
+OR
+
+<pre>$ sudo nano /etc/network/interfaces</pre>
+
+Find and remove dhcp entry:
+
+<pre>iface eth0 inet dhcp</pre>
+
+Append new network settings:
+
+<pre>iface eth0 inet static
+address 192.168.1.100
+netmask 255.255.255.0
+network 192.168.1.0
+broadcast 192.168.1.255
+gateway 192.168.1.254</pre>
+
+Save and close the file. Restart the network:
+
+<pre>$ sudo /etc/init.d/networking restart</pre>
+
+*Task: Define new DNS servers
+*
+Open /etc/resolv.conf file
+
+<pre>$ sudo vi /etc/resolv.conf </pre>
+
+You need to remove old DNS server assigned by DHCP server:
+
+<pre>search myisp.com
+nameserver 192.168.1.254
+nameserver 202.54.1.20
+nameserver 202.54.1.30</pre>
+
+Save and close the file.
+
+*Task: Test DNS server*
+
+<pre>$ host mariusv.com</pre>
+
+*Network command line cheat sheet*
+
+You can also use commands to change settings. Please note that these settings are temporary and not the permanent. Use above method to make network changes permanent or GUI tool as described below.
+
+*Task: Display network interface information*
+
+<pre>$ ifconfig</pre>
+
+*Take down network interface eth0 / take a network interface down*
+
+<pre>$ sudo ifconfig eth0 down</pre>
+
+OR
+
+<pre>$ sudo ifdown eth0 </pre>
+
+*Bring a network interface eth0 up *
+
+<pre>$ sudo ifconfig eth0 up</pre>
+
+OR
+
+<pre>$ sudo ifup eth0 </pre>
+
+*Change IP address and netmask from command line*
+
+Activate network interface eth0 with a new IP (192.168.1.50) / netmask:
+
+<pre>$ sudo ifconfig eth0 192.168.1.50 netmask 255.255.255.0 up</pre>
+
+*Display the routing table*
+
+<pre>$ /sbin/route </pre>
+
+OR
+
+<pre>$ /sbin/route -n</pre>
+
+Output:
+
+<pre>Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+localnet        *               255.255.255.0   U     0      0        0 ra0
+172.16.114.0    *               255.255.255.0   U     0      0        0 eth0
+172.16.236.0    *               255.255.255.0   U     0      0        0 eth1
+default         192.168.1.254   0.0.0.0         UG    0      0        0 ra0
+</pre>
+
+*Add a new gateway*
+
+<pre>$ sudo route add default gw 172.16.236.0</pre>
+
+*Display current active Internet connections (servers and established connection)*
+
+<pre>$ netstat -nat</pre>
+
+*Display open ports*
+
+<pre>$ sudo netstat -tulp</pre>
+
+OR
+
+<pre>$ sudo netstat -tulpn</pre>
+
+*Display network interfaces stats (RX/TX etc)* 
+
+<pre>$ netstat -i</pre>
+
+*Display output for active/established connections only*
+
+<pre>$ netstat -e
+$ netstat -te
+$ netstat -tue</pre>
+
+p. Where,
+
+
+<ul>
+<li>-t : TCP connections </li>
+<li>-u : UDP connections</li>
+<li>-e : Established </li>
+*Test network connectivity*
+
+Send ICMP ECHO_REQUEST to network hosts, routers, servers etc with ping command. This verifies connectivity exists between local host and remote network system:
+
+
+
+<pre>$ ping router
+$ ping 192.168.1.254
+$ ping mariusv.com</pre>
+
+
+
+
+

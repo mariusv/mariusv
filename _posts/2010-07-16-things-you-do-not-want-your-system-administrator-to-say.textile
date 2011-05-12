@@ -1,0 +1,106 @@
+---
+layout: post
+title: Things you do NOT want your System Administrator to say.
+categories: 
+- Personal
+- sysadmin
+- system administrator
+---
+
+   1.  Uh-oh.....
+   2. Shit!!
+   3. What the hell!?
+   4. Go get your backup tape. (You *do* have a backup tape?)
+   5. That's SOOOOO bizarre.
+   6. Wow!! Look at this.....
+   7. Hey!! The suns don't do this.
+   8. Terminated??!
+   9. What software license?
+  10. Well, it's doing *something*.....
+  11. Wow....that seemed *fast*.....
+  12. I got a better job at Lockheed...
+  13. Management says...
+  14. Sorry, the new equipment didn't get budgetted.
+  15. What do you mean that wasn't a copy?
+  16. It didn't do that a minute ago...
+  17. Where's the GUI on this thing?
+  18. Damn, and I just bought that pop...
+  19. Where's the DIR command?
+  20. The drive ate the tape but that's OK, I brought my screwdriver.
+  21. I cleaned up the root partition and now there's *lots* of free space.
+  22. What's this "any" key I'm supposed to press?
+  23. Do you smell something?
+  24. What's that grinding sound?
+  25. I have never seen it do *that* before...
+  26. I think it should not be doing that...
+  27. I remember the last time I saw it do that...
+  28. You might as well all go home early today ...
+  29. My leave starts tomorrow.
+  30. Ooops.
+  31. Hmm, maybe if I do this...
+  32. "Why is my "rm *.o" taking so long?"
+  33. Hmmm, curious...
+  34. Well, *my* files were backed up.
+  35. What do you mean you needed that directory?
+  36. What do you mean /home was on that disk? I umounted it!
+  37. Do you really need your home directory to do any work?
+  38. Oracle will be down until 8pm, but you can come back in and finish your work when it comes up tonight.
+  39. I didn't think anybody would be doing any work at 2am, so I killed your job.
+  40. Yes, I chowned all the files to belong to pvcs. Is that a problem to you?
+  41. We're standardizing on AIX.
+  42. Wonder what this command does?
+  43. What did you say your (l)user name was...? ;-)
+  44. You did *what* to the floppy???
+  45. Sorry, we deleted that package last week...
+  46. NO! Not *that* button!
+  47. Uh huh......"nu -k $USER".. no problem....sure thing...
+  48. Sorry, we deleted that package last week...
+  49. [looks at workstation] "Say, what version of DOS is this running?"
+  50. Oops! (said in a quiet, almost surprised voice)
+  51. *YEEEHA*!!! What a *CRASH*!!!
+  52. What do you mean that could take down the whole network?
+  53. What's this switch for anyways...?
+  54. Tell me again what that '-r' option to rm does
+  55. Say, What does "Superblock Error" mean, anyhow?
+  56. If I knew it wasn't going to work, I would have tested it sooner.
+  57. Was that *your* directory?
+  58. System coming down in 0 min....
+  59. The backup procedure works fine, but the restore is tricky!
+  60. Hey Fred, did you save that posting about restoring filesystems with vi and a toothpick? More importantly, did you print it out?
+  61. OH, SH*T! (as they scrabble at the keyboard for ^c).
+  62. The sprinkler system isn't supposed to leak is it?
+  63. It is only a minor upgrade, the system should be back up in a few hours. (This is said on a monday afternoon.)
+  64. I think we can plug just one more thing in to this outlet strip with out triping the breaker.
+  65. What is all this I here about static charges destroying computers?
+  66. I found this rabbit program that is supposed to test system performance and I have it running now.
+  67. Ummm... Didn't you say you turned it off?
+  68. The network's down, but we're working on it. Come back after diner. (Usually said at 2200 the night before thesis deadline...)
+  69. Ooops. Save your work, everyone. *FAST*!
+  70. Boy, it's a lot easier when you know what you're doing.
+  71. I hate it when that happens.
+  72. And what does it mean 'rm: .o: No such file or directory'?
+  73. Why did it say '/bin/rm: not found'?
+  74. Nobody was using that file /vmunix, were they?
+  75. You can do this patch with the system up...
+  76. What happens to a Hard Disk when you drop it?
+  77. The only copy of Norton Utilities was on THAT disk???
+  78. Well, I've got a backup, but the only copy of the restore program was on *THAT* disk....
+  79. What do mean by "fired"?
+  80. hey, what does mkfs do?
+  81. where did you say those backup tapes were kept?
+  82. ...and if we just swap these two disc controllers like *this*...
+  83. don't do that, it'll crash the sys........ SHIT
+  84. what's this hash prompt on my terminal mean?
+  85. dd if=/dev/null of=/vmunix
+  86. find /usr2 -name nethack -exec rm -f {};
+  87. now it's funny you should ask that, because I don't know either
+  88. Any more trouble from you and your account gets moved to the 750
+  89. Ooohh, lovely, it runs SVR4
+  90. SMIT makes it all so much easier......
+  91. Can you get VMS for this Sparc thingy?
+  92. I don't care what he says, I'm *not* having it on *my* network
+  93. We don't support that. We *won't* support that.
+  94. ...and after I patched the microcode...
+  95. You've got TECO. What more do you want?
+  96. We prefer not to change the root password, it's an nice easy one
+  97. Just add yourself to the password file and make a directory... 

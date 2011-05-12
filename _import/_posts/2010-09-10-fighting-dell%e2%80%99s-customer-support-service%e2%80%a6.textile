@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Fighting Dell\xE2\x80\x99s customer support service\xE2\x80\xA6"
+permalink: "http://www.mariusv.com/fighting-dell\xE2\x80\x99s-customer-support-service\xE2\x80\xA6/index.html"
+post_id: 437
+categories: 
+- costomer support
+- dell
+- Personal
+---
+
+
+
+For a few weeks already, I’m fighting with Dell’s customer support to get an Optiplex PC at work properly repaired. One of the USB ports from a system in our public computer rooms at the university, was broken. My colleague called Dell’s support service and they promised us to send a new front panel with USB port. A few days later, still nothing had arrived, so I called them again. This time they promised us to send a technician the next day in order to repair the machine.
+
+The next day, a technician successfully repaired the machine, but then when he wanted to put the machine back, the key got stuck in the anti-theft lock of the machine. There was no way to remove the key anymore, so the lock was broken. I had to call customer support again, to ask to send us a new lock. And then things went completely wrong.
+
+To summarize a long story, I called them already 4 times in order to get a new lock. They promised us once they would send a new lock  and they promised us already twice to send a technician to replace the lock, but I still haven’t seen a new lock up to now. And once they could not help met at all on the phone, because “their system was down”. Last time the person I had on the phone told me he could not even find any trace of my previous calls in their logging system.
+
+Is that what they call on site next business day warranty?

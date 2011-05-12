@@ -1,0 +1,25 @@
+---
+layout: post
+title: Ping entire subnet
+categories: 
+- linux
+- ping
+- subnet
+- Tutorials
+---
+
+Wrote a quick bash script to find which ip's on our subnet return a ping.
+
+<pre lang="bash">
+#!/bin/bash
+for ((i=1;i<=255;i+=1)); do
+echo "Pinging 192.168.1.$i"
+ping -c 5 -W 20 192.168.1.$i >> ping_log.txt
+done
+
+</pre>
+
+
+p. Or I just could've used nmap:
+
+@*nmap -sP 192.168.1.0/24*@

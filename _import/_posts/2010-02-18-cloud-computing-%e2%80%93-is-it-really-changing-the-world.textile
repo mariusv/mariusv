@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Cloud Computing \xC3\xA2\xE2\x82\xAC\xE2\x80\x9C Is it really changing the World?"
+permalink: "http://www.mariusv.com/cloud-computing-\xE2\x80\x93-is-it-really-changing-the-world/index.html"
+post_id: 32
+categories: 
+- change
+- cloud
+- computing
+- Technology
+- Tutorials
+---
+
+p. *Cloud Computing* is the network storage of your software applications and data in secured sites. Its main theme is to satisfy the fast growing computing needs of the users. Some of the major examples are _Google Docs_ and _Google Apps_ which provide common business applications online and accessible from a web browser, while the software and data are stored on their servers.
+
+
+<p style="background-color: rgb(238, 238, 238); font-size: 14px; color: rgb(79, 129, 0);">*Understanding Cloud Computing*
+
+
+p. In this context, a network of servers and connections is collectively known as â€œ*The Cloud*â€œ. Computing at this large scale allows users to access Super computer level power. We can reach into the Cloud for resources as and when we need them. And this is why Cloud Computing is also referenced to as â€œ*On-demand Computing*.â€
+
+
+
+p. You can access the information that you need, from just about any device with an Internet connection including mobiles and hand-held phones.
+
+
+p. <span id="more-413"></span>
+
+
+p. Basically, two parts are needed for Cloud Computing. The first is a Cloud server, which will act as the Super computer and the other part is the client computer. These are typically small and not very powerful computers, like _iPhone_, _BlackBerry_ or _Laptop_. They should be capable to pass commands and input to the Cloud server.
+
+
+p. Consider the simple example of _Google Docs_. The data storage here is done in Googleâ€™s Super computer and not in our local machine. But, we can access the information as long as we have a good and stable Internet connection.
+
+
+<div style="border: 2px solid black; width: 400px; text-align: justify; padding-left: 10px; padding-right: 10px; margin-left: 150px;">
+
+
+<tbody>
+|
+<img src="http://mariusv.com/images/bulb_idea.png">
+
+|
+p. *Cloud* Computing is definitely the future for data centers. Small scale industries also see a bright future in* it*.
+
+
+
+|
+
+</tbody>
+</div>
+
+<p style="background-color: rgb(238, 238, 238); font-size: 14px; color: rgb(79, 129, 0);">*Technical, Financial and Security Benefits of the Cloud*
+
+
+p. Cloud reduces the traditional costs and labor associated with deploying, maintaining and upgrading business technology. In Cloud Computing we store data in a centralized manner. Centralized data storage is what makes it easier to control and monitor. 
+
+
+p. We can also have an offline server in the same Cloud, kept ready for use as and when required. We would only need to pay for the storage until something happens and it has to be brought online. For example, if a server in the Cloud gets hacked or goes offline due to some hardware problems, we can clone that server at the click of a mouse and make the cloned disks instantly available. We donâ€™t need to â€œfindâ€ storage or have it â€œreadyâ€ - its just there. This also reduces the cost of testing security. By sharing the same application as a service, we donâ€™t need to foot the expensive security code review and penetration test. 
+
+
+p. Extended logging is another advantage of Cloud Computing. It also provides improved log indexing and search options.
+
+
+<p style="background-color: rgb(238, 238, 238); font-size: 14px; color: rgb(79, 129, 0);">*Cloud Computing - The Future?*
+
+
+p. However, printers or scanners will not work here since there is no hard drive attached to the physical, local machine. 
+
+
+p. Cloud Computing allows us to use complicated programs easily and save data on Super computers. All the data is located on a central server, so admins can control the access to the files as per requirement. For this reason we can say that it provides better and easier management of data.
+
+
+p. Cloud Computing is today seen as the next big thing in remote and Distributed Computing. It is a fast growing technology. As with many other budding technologies, there are a lot of questions about it now. But, thatâ€™s probably because the possibilities are seemingly infinite. Cloud Computing is definitely the future for data centers. Small scale industries also see a bright future in it.
+
+
+
+

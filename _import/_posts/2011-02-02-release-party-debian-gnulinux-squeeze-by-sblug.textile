@@ -1,0 +1,18 @@
+---
+layout: post
+title: Release Party Debian GNU/Linux Squeeze by SbLUG
+permalink: http://www.mariusv.com/release-party-debian-gnulinux-squeeze-by-sblug/index.html
+post_id: 768
+categories: 
+- debian
+- linux
+- Personal
+- relesae party
+- squeeze
+---
+
+As the new version of <a href="http://debian.org">Debian GNU/Linux</a> is about to be launched in 5 days, the <a href="http://www.sblug.ro">Linux User Group in Sibiu</a> is preparing a traditional release party for the well known distribution at Haller Cafe on 5th February 7 PM local time.
+The event will be divided in 3 parts: contributions to the <a href="http://debian.org">Debian GNU/Linux project</a>, beer & comments on Squeeze and possible some bowling in the end.
+
+More details <a href="http://www.sblug.ro/debian-squeeze-release-party">here</a> or subscribe to <a href="http://liste.sblug.ro/cgi-bin/mailman/listinfo">SbLUG mailing list</a>(only in Romanian).
+So we will be waiting you in <a href="http://osm.org/go/0gMMofB6U-">Haller Cafe in „Piața Mare”</a>

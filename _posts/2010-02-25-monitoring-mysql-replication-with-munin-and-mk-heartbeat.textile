@@ -1,0 +1,66 @@
+---
+layout: post
+title: Monitoring MySQL Replication with Munin and mk-heartbeat
+categories: 
+- maatkit
+- plugin
+- scripts
+- sql
+- Technology
+- Tutorials
+---
+
+We use <a onclick="javascript:pageTracker._trackPageview('/outgoing/munin.projects.linpro.no/');" href="http://munin.projects.linpro.no/">Munin</a> and MySQL Replication from our production systems for hot standby purposes. But how to know if replication breaks?
+
+
+p. Using components of the excellent <a onclick="javascript:pageTracker._trackPageview('/outgoing/www.maatkit.org/');" href="http://www.maatkit.org/">MySQL Toolkit</a>, I wrote a Munin plug-in to monitor replication delay and alert with an email if the delay gets above a certain level. This requires running <a onclick="javascript:pageTracker._trackPageview('/outgoing/www.maatkit.org/doc/mk-heartbeat.html');" href="http://www.maatkit.org/doc/mk-heartbeat.html">mk-heartbeat</a> as a daemon.
+
+
+p. Hereâ€™s the plugin code:
+
+
+
+<pre lang="bash">
+#!/bin/bash
+
+## Plug-in to Monitor MySQL Replication Delay.
+
+#
+
+#$Author: mariusv $
+
+#$Date: 2010-02-25 13:29:21 $
+
+#$RCSfile: mysql_rep_delay,v $
+
+#$Revision: 1.1 $
+
+case $1 in
+
+        config)
+
+                cat <<'EOM'
+
+graph_title MySQL Replication Delay
+
+graph_vlabel seconds
+
+mysql_rep_delay.label delay
+
+mysql_rep_delay.warning 60
+
+mysql_rep_delay.critical 3600
+
+graph_category mysql
+
+EOM
+
+                exit 0;;
+
+esac
+
+echo -n "mysql_rep_delay.value "
+
+mk-heartbeat -D test --check -h localhost</pre>
+
+

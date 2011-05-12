@@ -1,0 +1,30 @@
+---
+layout: post
+title: (OpenVZ) Setting timezones across all VPS`S
+permalink: http://www.mariusv.com/openvzsetting-timezones-across-all-vpss/index.html
+post_id: 466
+categories: 
+- bash
+- Bash scripts
+- OpenVZ
+- Tutorials
+---
+
+All of servers that I manage are currently based off of the Phoenix, Arizona, USA Timezone. This script allows this conversion from each HN (Host Node):
+
+<pre lang="bash">#!/bin/bash
+for f in `ls /vz/private`
+do
+  vzctl exec $f rm -f /etc/localtime 2>/dev/null
+  vzctl exec $f ln -s /usr/share/zoneinfo/America/Phoenix /etc/localtime
+done</pre>
+
+or : 
+
+<pre lang="bash">for i in `vzlist | awk ‘{print $1} | grep -v CTID’`
+do
+vzctl exec $i rm -f /etc/localtime 2>/dev/null
+vzctl exec $i ln -s /usr/share/zoneinfo/America/Phoenix /etc/localtime
+done</pre>
+
+Because _/vz/private_ may hold disabled/suspended/shutdown containers or even random directories.

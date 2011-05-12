@@ -1,0 +1,81 @@
+---
+layout: post
+title: RackSpace Cloud new server script
+permalink: http://www.mariusv.com/rackspace-cloud-new-server-script/index.html
+post_id: 319
+categories: 
+- bash
+- cloud
+- Personal
+- rackspace
+- Tutorials
+---
+
+p. I've found myself setting up lots of servers over at <a href="http://rackspacecloud.com">RackSpace Cloud</a> lately. It seemed look a good idea to automate everything instead of leaving it up to myself to remember everything you have to do each time.
+
+
+
+p. I wrote <a href="http://gist.github.com/478226">this little shell script</a> to make life easier. It installs everything I need to run a Ruby on Rails app in a matter of minutes. It's designed to work with Cent OS 5.4+. Here's the script's main tasks:
+
+
+
+<ul>
+<li>Install Git 1.7.1.1</li>
+
+<li>Install Ruby 1.8.7p299</li>
+<li>Install  RubyGems 1.3.7</li>
+<li>Install  Passenger 2.2.15</li>
+<li>Install  Nginx 0.8.45 (with Passenger and SSL modules)</li>
+<li>Install  Postgres 8.4.4</li>
+<li>Initialize Postgres</li>
+<li>Install  ImageMagick 6.6.3-0</li>
+<li>Install  Bundler (latest)</li>
+<li>Open port 80 in iptables</li>
+
+<li>Open port 443 in iptables</li>
+<li>Start Nginx</li>
+<li>Start Postgres</li>
+</ul>
+
+
+p. For me, that's enough to get the bare bones of an app running. The rest, I let <a href="http://gembundler.com/">Bundler</a> handle for me. I use this on all of my servers that I manage.
+
+
+
+h3. Let's get started already
+
+
+
+p. All you have to do to setup your new server is run the following one line:
+
+
+
+<pre>@$ wget http://gist.github.com/raw/478226/server.sh
+$ chmod +x server.sh
+$ ./server.sh
+@</pre>
+
+p. You'll have to press @y@ twice at the beginning when yum asks you to install some stuff. After that, you can let it do its thing.
+
+
+
+h3. Configuration
+
+
+
+p. It's super easy to add a new Nginx virtual host. All you have to do is add a file with the @.conf@ extension to @/usr/local/nginx/conf/virtual_hosts/@. Here's a good <a href="http://gist.github.com/478237#file_example.conf">example virtual host</a>. Of course, you can configure any of the installed stuff like you normally would. My <a href="http://gist.github.com/478231#file_nginx.conf">nginx.conf</a> just makes setting up virtual hosts easy. After you edit any of the Nginx configuration files, you'll want to run @service nginx reload@ to apply your changes.
+
+
+
+h3. One more thing
+
+
+
+p. There's also <a href="http://gist.github.com/478242#file_after.sh">another little script</a> that I run after the main one that is more specific to my needs. This little guy creates @/var/www/@, setups the proper permissions, and installs some database related gems. You can run it with the following one line:
+
+
+
+<pre>@$ wget http://gist.github.com/raw/478242/after.sh
+$ chmod +x after.sh
+$ ./after.sh
+@</pre>

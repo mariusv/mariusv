@@ -1,0 +1,22 @@
+---
+layout: post
+title: Backup and restore MySQL from shell
+permalink: http://www.mariusv.com/backup-and-restore-mysql-from-shell/index.html
+post_id: 272
+categories: 
+- backup
+- mysql
+- Tutorials
+---
+
+Backup is a *VERY* important thing. I’m unfortunately not the best to remember it myself and it’s been costly.. But it is also very nice to dump all tables to a file and move it to another server and restore it with a simple command (after you have created the database of course).
+
+To back up your database use the following command:
+
+<pre>mysqldump -u [Username] -p[password] [databasename] > [backupfile.sql]</pre>
+
+And to restore it again use this:
+
+<pre>mysql -u [Username] -p[password] [databasename] < [backupfile.sql]</pre>
+
+And then it’s done! Just remember to store your backups a safe place.

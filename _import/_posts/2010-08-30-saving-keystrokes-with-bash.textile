@@ -1,0 +1,36 @@
+---
+layout: post
+title: Saving Keystrokes With Bash
+permalink: http://www.mariusv.com/saving-keystrokes-with-bash/index.html
+post_id: 386
+categories: 
+- bash
+- Bash scripts
+- keyboard
+- Tutorials
+---
+
+Bash is a wonderful fully featured shell that provides a multitude of ways to cut back on your keystrokes. One of my favorite features, which I don’t see used often enough, is brace expansion. Simply put, brace expansion lets you specify multiple similar arguments without retyping the commonalities. Let’s take a look at how this is accomplished.
+
+With this handy feature, you can do a multitude of things. You can make a backup copy of a file:
+
+<pre lang='c'>cp /etc/mpd.conf{,~}  #Same as cp /etc/mpd.conf /etc/mpd.conf~</pre>
+
+Then you can restore that file:
+
+<pre lang='c'>cp /etc/mpd.conf{~,}  #Same as cp /etc/mpd.conf~ /etc/mpd.conf</pre>
+
+Obviously, it doesn’t stop here. You can make a whole directory structure:
+
+<pre lang='c'>mkdir -p /skynet/{usr,opt}/{rw,ro}
+#Same as mkdir -p /skynet/usr/rw /skynet/usr/ro /skynet/opt/rw /skynet/opt/ro</pre>
+
+Bash will expand ranges as well. You can create a zero padded range like so:
+
+<pre lang='c'>echo {000..100}  #Will print 000 001 002 003 ... 097 098 099 100</pre>
+
+Ranges aren’t limited to being numerical. Better yet, expressions can be the preamble and postscript to each other.
+
+<pre lang='c'>echo {0..9}{A..Z}   #Prints 260 strings!</pre>
+
+If you really use your noodle you can nest expressions, though I’ve personally not come across a situation where this has been needed (yet).

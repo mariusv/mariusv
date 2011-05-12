@@ -1,0 +1,78 @@
+---
+layout: post
+title: Free public DNS servers list
+categories: 
+- DNS
+- google
+- Personal
+- servers
+---
+
+Here is a list of *public DNS* servers which are free for everyone to use.&nbsp;There are several reasons why you would want to use *alternative DNS* servers, such as *speeding up your browsing experience* and *improving your security*, but the most obvious one﻿ is as a backup solution when your ISP servers are down.
+
+
+
+p. <a title="Google Public DNS" href="http://code.google.com/speed/public-dns/">Google Public DNS</a> :
+
+
+<ul>
+<li>8.8.8.8</li>
+<li>8.8.4.4</li>
+</ul>
+p. ﻿Level 3 Communications :
+
+
+<ul>
+<li>4.2.2.1</li>
+<li>4.2.2.2</li>
+
+<li>4.2.2.3</li>
+<li>4.2.2.4</li>
+<li>4.2.2.5</li>
+<li>4.2.2.6</li>
+</ul>
+p. <a title="OpenDNS" href="http://www.opendns.com">OpenDNS</a> :
+
+
+<ul>
+<li>208.67.222.222</li>
+<li>208.67.220.220</li>
+
+</ul>
+p. <a title="OpenNIC Public DNS Servers" href="http://www.opennicproject.org/index.php/start-here/51-migrate-to-opennic/75-public-dns">OpenNIC</a> :
+
+
+<ul>
+<li>58.6.115.42 (Queensland, Australia)</li>
+<li>202.83.95.227 (Queensland, Australia)</li>
+<li>119.31.230.42 (Victoria, Australia)</li>
+<li>217.79.186.148 (Germany)</li>
+<li>27.110.120.30 (New Zealand)</li>
+<li>89.16.173.11 (United Kingdom)</li>
+
+<li>216.87.84.211 (Colorado, United States)</li>
+<li>2001:470:8388:10:0:100:53:20 (Colorado, United States)</li>
+<li>69.164.208.50 (New Jersey, United States)</li>
+<li>69.164.211.225 (New Jersey, United States)</li>
+<li>64.0.55.201 (New York, United States)</li>
+<li>66.244.95.20 (Indiana, United States)</li>
+<li>2001:470:1f10:c6::2 (Indiana, United States)</li>
+<li>72.14.189.120 (Texas, United States)</li>
+<li>2001:470:1f0f:48e::2 new (Texas, United States)</li>
+
+<li>69.164.196.21 (Texas, United States)</li>
+</ul>
+p. <a title="DNS Advantage" href="http://www.dnsadvantage.com">DNS Advantage</a> :
+
+
+<ul>
+<li>156.154.70.1</li>
+<li>156.154.71.1</li>
+</ul>
+p. <a title="ScrubIT" href="http://www.scrubit.com">ScrubIt</a> :
+
+
+
+<ul>
+<li>67.138.54.100</li>
+<li>207.225.209.66</li>

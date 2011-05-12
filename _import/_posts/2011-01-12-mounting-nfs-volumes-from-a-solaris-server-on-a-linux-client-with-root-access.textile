@@ -1,0 +1,25 @@
+---
+layout: post
+title: Mounting NFS volumes from a Solaris server on a Linux Client with root access
+permalink: http://www.mariusv.com/mounting-nfs-volumes-from-a-solaris-server-on-a-linux-client-with-root-access/index.html
+post_id: 709
+categories: 
+- linux
+- nfs
+- solaris
+- Tutorials
+---
+
+If you are having trouble mounting nfs volumes on a Solaris 10/11 server from a linux client, here is the secret voodo chant:
+
+<pre>solarishost# sharemgr set -P nfs -S sys -p “rw=linux_hostname,root=linux_hostname” servers</pre>
+
+This presumes you have defined the group ’servers’. If not, use:
+
+<pre>sharemgr create -P nfs servers</pre>
+
+and add your shares to it:
+
+<pre>sharemgr add-share -s /path/to/share -d “Your Description” servers</pre>
+
+Simple, eh? :-P

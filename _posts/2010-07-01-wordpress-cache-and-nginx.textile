@@ -1,0 +1,54 @@
+---
+layout: post
+title: Wordpress cache and Nginx
+categories: 
+- Nginx
+- Technology
+- wordpress
+---
+
+<a href="http://wordpress.org/extend/plugins/wp-super-cache/">WP Super Cache</a> is a very good tool for speeding up your WordPress installation while at the same time reducing server load. However, WP Super Cache uses _mod_rewrite_ to handle requests, which is not compatible with <a href="http://wiki.nginx.org/Main">Nginx</a>. For it to work with Nginx we need to create a few rewrite rules in the server config file.
+
+
+p. In my example I have Nginx installed with php5 running as FastCGI, configured <a href="http://wiki.nginx.org/PHPFcgiExample">like this</a>.
+
+
+p. This requires permalinks to be used, request containing query strings will not be served cached content. The following rules are added to the location / { } block in the Nginx config file for that virtual host. This assumes WordPress is not installed in a sub folder.
+
+
+
+<pre># Return existing files
+if (-f $request_filename) {
+        break;
+}
+
+set $supercache_file '';
+set $supercache_uri $request_uri;
+
+if ($request_method = POST) {
+        set $supercache_uri '';
+}
+
+# Bypass cache for requests containing a query string
+if ($query_string) {
+        set $supercache_uri '';
+}
+
+if ($http_cookie ~* "comment_author_|wordpress|wp-postpass_" ) {
+        set $supercache_uri '';
+}
+
+# Specify the cache file
+if ($supercache_uri ~ ^(.+)$) {
+        set $supercache_file /wp-content/cache/supercache/$http_host/$1index.html;
+}
+
+# Serve the cache file, if it exists
+if (-f $document_root$supercache_file) {
+        rewrite ^(.*)$ $supercache_file break;
+}
+
+# Everything else goes to index.php
+if (!-e $request_filename) {
+        rewrite . /index.php last;
+}</pre>

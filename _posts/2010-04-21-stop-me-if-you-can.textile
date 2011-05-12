@@ -1,0 +1,15 @@
+---
+layout: post
+title: Stop me if YOU can
+categories: 
+- apple
+- ibm
+- Personal
+- steve jobs
+---
+
+<a href="http://www.mariusv.com/up/apple.jpg"><img src="http://www.mariusv.com/up/apple.jpg" alt="" title="apple" width="390" height="240" class="aligncenter size-full wp-image-150" /></a>
+<a href="http://www.mariusv.com/up/apple1.jpg"><img src="http://www.mariusv.com/up/apple1.jpg" alt="" title="apple1" width="390" height="240" class="aligncenter size-full wp-image-151" /></a>
+<a href="http://www.mariusv.com/up/apple2.jpg"><img src="http://www.mariusv.com/up/apple2.jpg" alt="" title="apple2" width="390" height="240" class="aligncenter size-full wp-image-152" /></a>
+
+AHAHAHAHA...via @<a href="http://www.pidjin.net">Pidjin</a>

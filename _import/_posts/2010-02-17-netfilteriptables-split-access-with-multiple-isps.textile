@@ -1,0 +1,137 @@
+---
+layout: post
+title: Netfilter/iptables split access with multiple ISPs
+permalink: http://www.mariusv.com/netfilteriptables-split-access-with-multiple-isps/index.html
+post_id: 20
+categories: 
+- balancer
+- connmark
+- conntrack
+- dnat
+- icmp
+- iproute2
+- iptables
+- load balancing
+- mark
+- netfilter
+- snat
+- split access
+- tcp
+- Technology
+- Tutorials
+- udp
+---
+
+The article focuses on using the standard iproute2 tool to allow the box to attempt to balance traffic over multiple uplinks with multiple default routes. While relatively easy to set up, it has a few problems:
+
+   1. Routes are cached, meaning that once the balancer has decided on a route to a certain IP for the first time, it will continue to use this route for a while.
+   2. There is no real control over which packets end up over which route, other than some basic metrics such as source IP and destination IP.
+   3. Certain long established TCP connections such as MSN or IRC die after the route cache expires and the packets begin being routed over the other connection. Logically, there should be a fix for this or theres a bug in my script, either way I gave up digging after a while, and just forced connections to given IPs over the same route each time.
+
+Iâ€™ve recently decided to give this a go in netfilter purely. My environment is a router with a number of LAN devices, with eth0 being the LAN interface (192.168.1.0/24), while eth1 and eth2 are separate ISP links with public IPs.
+
+Firstly my iproute2 script:
+
+
+<pre>IF1=eth1
+IF2=eth2
+IP1=94.195.XXX.XXX #IP on conn1
+IP2=94.194.XXX.XXX #IP on conn2
+P1=94.195.XXX.XXX #Gateway on conn1
+P2=94.194.XXX.XXX #Gateway on conn2
+P1_NET=94.195.XXX.XXX #Network address conn1
+P2_NET=94.194.XXX.XXX #Network address conn2
+ip route add $P1_NET dev $IF1 src $IP1 table 1
+ip route add default via $P1 table 1
+ip route add $P2_NET dev $IF2 src $IP2 table 2
+ip route add default via $P2 table 2
+ip route add $P1_NET dev $IF1 src $IP1
+ip route add $P2_NET dev $IF2 src $IP2
+ip rule add from $IP1 table 1
+ip rule add from $IP2 table 2
+ip rule add fwmark 1 table 1
+ip rule add fwmark 2 table 2</pre>
+
+What weâ€™ve done at this point is create two tables, and set up the routers for each table, then specify that any packets marked as â€˜1â€² will leave via table 1 (i.e. routed out over eth1), and any packets marked â€˜2â€² will leave via table 2 (i.e. routed out over eth2). We will then mark the packets with iptables.
+
+Now, Iâ€™ve only done basic INPUT/FORWARD/OUTPUT chain firewalling with iptables so Iâ€™d very much appreciate any feedback on how this can be improved or fixed, specifically in regards to security. Hereâ€™s the IP tables script:
+
+<pre lang="bash">#!/bin/bash
+
+IPTABLES=iptables
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+echo 3600 > /proc/sys/net/ipv4/route/secret_interval
+
+$IPTABLES -F
+$IPTABLES -X
+$IPTABLES -t nat -F
+$IPTABLES -t nat -X
+$IPTABLES -t filter -F
+$IPTABLES -t filter -X
+$IPTABLES -t mangle -F
+$IPTABLES -t mangle -X
+
+${IPTABLES} -t mangle -N M1
+${IPTABLES} -t mangle -A M1 -j MARK â€“set-mark 1
+${IPTABLES} -t mangle -A M1 -j CONNMARK â€“save-mark
+
+${IPTABLES} -t mangle -N M2
+${IPTABLES} -t mangle -A M2 -j MARK â€“set-mark 2
+${IPTABLES} -t mangle -A M2 -j CONNMARK â€“save-mark
+
+${IPTABLES} -t nat -N OUT_ETH1
+${IPTABLES} -t nat -A OUT_ETH1 -j SNAT â€“to-source 94.195.XXX.XXX
+
+${IPTABLES} -t nat -N OUT_ETH2
+${IPTABLES} -t nat -A OUT_ETH2 -j SNAT â€“to-source 94.194.XXX.XXX
+${IPTABLES} -t nat -A POSTROUTING -o eth1 -j OUT_ETH1
+${IPTABLES} -t nat -A POSTROUTING -o eth2 -j OUT_ETH2
+
+${IPTABLES} -t nat -N IN_ETH1
+${IPTABLES} -t nat -A IN_ETH1 -j MARK â€“set-mark 1
+${IPTABLES} -t nat -A IN_ETH1 -j CONNMARK â€“save-mark
+
+${IPTABLES} -t nat -N IN_ETH2
+${IPTABLES} -t nat -A IN_ETH2 -j MARK â€“set-mark 2
+${IPTABLES} -t nat -A IN_ETH2 -j CONNMARK â€“save-mark
+
+${IPTABLES} -t nat -A PREROUTING -i eth1 -j IN_ETH1
+${IPTABLES} -t nat -A PREROUTING -i eth2 -j IN_ETH2
+
+#balance TCP
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p tcp -m tcp -m state â€“state NEW -m statistic â€“mode nth â€“every 2 â€“packet 0 -j M1
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p tcp -m tcp -m state â€“state NEW -m statistic â€“mode nth â€“every 2 â€“packet 1 -j M2
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p tcp -m tcp -m state â€“state ESTABLISHED,RELATED -j CONNMARK â€“restore-mark
+
+#balance ICMP
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p icmp -m icmp -m state â€“state NEW -m statistic â€“mode nth â€“every 2 â€“packet 0 -j M1
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p icmp -m icmp -m state â€“state NEW -m statistic â€“mode nth â€“every 2 â€“packet 1 -j M2
+
+#balance UDP
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p udp -m udp -m statistic â€“mode nth â€“every 2 â€“packet 0 -j M1
+${IPTABLES} -t mangle -A PREROUTING -i eth0 -p udp -m udp -m statistic â€“mode nth â€“every 2 â€“packet 1 -j M2
+
+#slingbox
+${IPTABLES} -A PREROUTING -t nat -i eth1 -p tcp â€“dport 5001 -j DNAT â€“to 192.168.1.254:5001
+${IPTABLES} -A PREROUTING -t nat -i eth2 -p tcp â€“dport 5001 -j DNAT â€“to 192.168.1.254:5001
+
+ip route flush cache
+exit</pre>
+
+This script should do the following:
+
+   1. We use SNAT to route traffic out of eth1 and eth2
+   2. We mark any packets coming in to eth1 or eth2 with their respective marks #is this necessary?
+   3. We set a counter total of â€˜2â€² and then count every packet. If the counter is at 0, packets are sent to our custom table M1 and if the counter is at 1, the packets are sent out to our custom table M2
+   4. If the packet is a NEW TCP packet, then we mark the outgoing packet as in â€˜3â€² above, then any RELATED packets to the ESTABLISHED connection as automatically assigned the same mark. This has to happen, and will mean that one connection to a given host is only actually established over one external interface at a time.
+   5. UDP and ICMP packets are just marked regardless. #is this correct?
+   6. I then forward port 5001 to an internal LAN device â€™slingboxâ€™. I allow this over both connections so I can connect in via the other if one is down.
+
+This basic logic for deciding which route to send a packet over works well so far with traffic balanced well. We can look to change this now to to match and decide based on packet contents, load on either line and a whole host of other statistics..
+
+At this point, the box itself has no default gateway and will therefore not have any outbound internet access (although inbound will work through the routes we set up with iproute2). Is there a way to configure this with iptables in the OUTPUT or PREROUTING chain? I couldnâ€™t get it working as with no default route set, Iâ€™m not sure that you can? Instead, I use the iproute2 balancing method:
+
+<pre>ip route add default scope global nexthop via $P1 dev $IF1 weight 1 nexthop via $P2 dev $IF2 weight 1</pre>
+
+This is not ideal but as itâ€™s the router itself and I donâ€™t really care about itâ€™s internet access. The LAN is still routed using our iptables method above.

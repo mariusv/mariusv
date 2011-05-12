@@ -1,0 +1,39 @@
+---
+layout: post
+title: Setting up SSH host shortnames
+categories: 
+- host
+- Personal
+- shortnames
+- ssh
+- Tutorials
+---
+
+Here’s an example setup to create SSH host shortnames. On your local computer, add the following to _~/.ssh/config_ :
+
+<pre lang="bash">Host server1
+HostName server1.internet.com
+User marius
+
+Host server2
+HostName server2.internet.com
+User marius
+
+Host *
+User marius</pre>
+
+
+p. Now with this file saved, you can ssh into _server2.hostname.tld_ with just the following command:
+
+
+
+@ssh server2@
+
+p. This will save you having to type out:
+
+
+
+@ssh marius@server2.hostname.tld@
+
+p. And if you have _public key authentication_ setup, it makes the process even smoother. Adding the wildcard host record at the bottom allows you to specify a default username to use for other servers to the ones you’ve not specified above.
+

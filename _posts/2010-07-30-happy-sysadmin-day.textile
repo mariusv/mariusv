@@ -1,0 +1,24 @@
+---
+layout: post
+title: Happy SysAdmin Day!!
+categories: 
+- Personal
+- sysadmin
+---
+
+Secretaries, the unsung heroes of any office and corporate structure have their own "holiday" where we show our appreciation with fruit baskets, flowers, and ideally ; An Excellent Lunch on the Boss's American Express Platinum.
+
+Systems Administrators, also unsung heroes, have a similar Holiday traditionally held on the last Friday of July.
+
+So, today is SysAdmin Appreciation Day . Being a SysAdmin for all of my adult life, I feel that I may offer a number of suggestions to members of management (and the secretaries ; after all, who got you the best flowers?) and other employees of any particular organization.
+1. Gifts : SysAdmins love toys. Leggos, Nerf-like bobbles, and things that light-up are almost always a hit. "Gadgets" that *do* something but do not necessarily serve a useful purpose  usually "win". [Note : Toys with magnets should be avoided.] Gifts need not be expensive as many intriguing doo-hickies are readily available from Toys-R-Us for but a few coins of the realm.
+
+2. Food : All SysAdmins like food. However, each SysAdmin is different as some are prone to the Sushi route, others enjoy a good pizza, and some go for the Extra Spicy/three-alarm BBQ Ribs, and some are vegetarian. Best to ask before making reservations.
+
+3. Booze : As a *General Rule* SysAdmins tend to prefer Beer (Miller, Budweiser, and Coors are not "beer" in any context ... find a pub with Micro Brews). Your SysAdmin may have an affinity for wine or "Fruity Rum Drinks" (say). It is a good to have Accounts Payable clear any debt on the American Express before heading to the pub. Do not match a SysAdmin drink-for-drink, as this is unwise and unhealthy. [Note : Under NO CIRCUMSTANCES is a member of management to engage in drinking hard liquor with a SysAdmin ... lest your slurred question "What do you think about {foo}?" get answered openly and honestly (beverages over 20 proof are strictly verboten).]
+
+*Bonus* If your SysAdmin should lack a "Y" Chromosome, the above three rules still apply, as written. However an additional item : e.g. "Flowers" should be included because no SysAdmins have personal lives and I can guarantee that your "XX" Chromosomed SysAdmin hasn't seen flowers from anyone in a very long time.
+
+By no means is this list completely comprehensive, nor should any of it be exercised if you expect any Systems Administration to actually occur after any of the above items are put into play : Food makes us stupid, we will play with the bobbles, and large quantities of beer should be pretty self-explanatory.
+
+With that, I leave you to buying off your SysAdmin's love and adoration (until the puzzle is solved, the batteries stop workin' on the Blinken-Lights, real food sends them into anaphylactic shock, and depending on your SysAdmin either the beer runs out or everyone sobers up). Also, I recommend, that at no point after the festivities start, is the SysAdmin allowed to use the "root"/"Administrator"/"admin"/God account until Saturday when, inevitably, we will have to return to work to reset someone's password.

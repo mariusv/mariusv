@@ -1,0 +1,28 @@
+---
+layout: post
+title: Compile FFmpeg on Ubuntu Karmic
+permalink: http://www.mariusv.com/compile-ffmpeg-on-ubuntu-karmic/index.html
+post_id: 167
+categories: 
+- ffmpeg
+- linux
+- server
+- sysadmin
+- Tutorials
+- ubuntu
+---
+
+Install the following packages:
+
+<pre>$ sudo apt-get install faad libmp4v2-dev libfaac0 libfaac-dev libxvidcore4 libxvidcore4-dev liba52-0.7.4 liba52-0.7.4-dev libx264-dev libgsm-tools libogg-dev libtheora-bin libfaad-dev libvorbis-dev libtheora-dev libdts-dev git-core yasm texi2html checkinstall</pre>
+
+Then:
+
+<pre>apt-get purge ffmpeg (in case you have any pre-installed stuff from the standard repo)</pre>
+
+Latest version of Yasm
+
+<pre>$ wget http://www.tortall.net/projects/yasm/releases/yasm-0.7.2.tar.gz
+$ cd yasm
+$ ./configure;make;
+$ sudo make install</pre>

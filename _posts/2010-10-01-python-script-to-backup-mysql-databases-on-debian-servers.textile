@@ -1,0 +1,44 @@
+---
+layout: post
+title: Python script to backup mysql databases on Debian servers
+categories: 
+- backup
+- debian
+- Personal
+- python
+- Tutorials
+---
+
+Here’s a short python script I must have knocked up some time ago – and totally forgotten – hopefully it’ll be of some use to others….
+
+Purpose: backup all MySQL databases, one in each file with a timestamp on the end. You’ll probably want to have a secondary cron job which does something like :
+
+find_ /backups/mysql -mtime +5 -print | xargs -r rm_
+
+to delete old copies… changing +5 to how ever many days history you wish to have.
+
+Method: Read _/etc/mysql/debian.cnf_ to get login details for MySQL, connect to MySQL and ask it for a list of all databases, go through this list calling mysqldump on each one.
+
+Code:
+<pre lang="python">#!/usr/bin/env python
+import ConfigParser
+import os
+import time
+
+# On Debian, /etc/mysql/debian.cnf contains 'root' a like login and password.
+config = ConfigParser.ConfigParser()
+config.read("/etc/mysql/debian.cnf")
+username = config.get('client', 'user')
+password = config.get('client', 'password')
+hostname = config.get('client', 'host')
+
+filestamp = time.strftime('%Y-%m-%d')
+
+# Get a list of databases with :
+database_list_command="mysql -u %s -p%s -h %s --silent -N -e 'show databases'" % (username, password, hostname)
+for database in os.popen(database_list_command).readlines():
+    database = database.strip()
+    if database == 'information_schema':
+        continue
+    filename = "/backups/mysql/%s-%s.sql" % (database, filestamp)
+    os.popen("mysqldump -u %s -p%s -h %s -e --opt -c %s | gzip -c > %s.gz" % (username, password, hostname, database, filename))</pre>

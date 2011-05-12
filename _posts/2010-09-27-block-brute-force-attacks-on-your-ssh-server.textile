@@ -1,0 +1,29 @@
+---
+layout: post
+title: Block brute force attacks on your SSH server
+categories: 
+- iptables
+- linux
+- ssh
+- Tutorials
+---
+
+@-A INPUT -i eth0.103 -p tcp -m tcp --dport 22 -m state --state NEW -m recent --set --name SSH --rsource
+-A INPUT -i eth0.103 -p tcp -m tcp --dport 22 -m recent --rcheck --seconds 30 --hitcount 4 --rttl --name SSH --rsource -j REJECT --reject-with tcp-reset
+-A INPUT -i eth0.103 -p tcp -m tcp --dport 22 -m recent --rcheck --seconds 30 --hitcount 3 --rttl --name SSH --rsource -j LOG --log-prefix "SSH brute force "
+-A INPUT -i eth0.103 -p tcp -m tcp --dport 22 -m recent --update --seconds 30 --hitcount 3 --rttl --name SSH --rsource -j REJECT --reject-with tcp-reset
+-A INPUT -i eth0.103 -p tcp -m tcp --dport 22 -j ACCEPT@
+
+*Now what is it?  What does it do?  How does it work?*
+
+OK. &nbsp;Let's explain in English. &nbsp;You put these five rules in your iptables table _filter_ (the default table).
+
+
+
+<ol><li>The first rule tells the system:
+_TCP packets are going to come in, that will attempt to establish an SSH connection. &nbsp;Mark them as SSH. &nbsp;Pay attention to the source of the packet._</li><li>The second rule says:
+_If a packet attempting to establish an SSH connection comes, and it's the fourth packet to come from the same source in thirty seconds, just reject it with prejudice and stop thinking about it._</li><li>The third and fourth rules mean:
+_If an SSH connection packet comes in, and it's the third attempt from the same guy in thirty seconds, log it to the system log once, then immediately reject it and forget about it._</li><li>The fifth rule says:
+_Any SSH packet not stopped so far, just accept it._</li></ol>
+p. And that's all. &nbsp;You may want to change your network interface (*-i eth0.103*) to the public-facing network interface in your computer / server. &nbsp;You may also want to adjust the number of seconds and hitcount to your tastes. &nbsp;Remember that the second rule has a hitcount that is one higher than the ones following it -- this is a precaution to stop the packet from continuing down the chain of rules, so brute forcing won't spam your logs. &nbsp;Spamming your logs may not be a problem to you, but it is a problem in my environment because the server literally speaks attacks out loud.
+

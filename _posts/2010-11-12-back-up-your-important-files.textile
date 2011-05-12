@@ -1,0 +1,69 @@
+---
+layout: post
+title: Back up your important files
+categories: 
+- backup
+- Personal
+- Tutorials
+---
+
+p. Once you have got your distro setup all nicely, backup all your important config files !!
+
+
+p. Why ?
+
+
+p. Because you just know that sooner or later you are going to mess with something, or try to install something that you are going to wish you hadn’t touched, and completely bork your system, aren’t you?
+
+
+p. yes sir!
+
+
+p. Ok,
+
+
+*Open the terminal and copy and paste these commands:*
+
+bq. p. marius@valhalla:~$ su -c "mkdir backups"
+
+marius@valhalla:~$ su
+
+root@valhalla:/home/marius# cp -f /etc/modules backups/
+
+root@valhalla:/home/marius# cp -f /etc/apt/sources.list backups/
+
+root@valhalla:/home/marius# cp -f /etc/X11/xorg.conf backups/
+
+root@valhalla:/home/marius# cp -f /etc/X11/xorg.conf.* backups/
+
+root@valhalla:/home/marius# cp -f /etc/fstab backups/
+
+root@valhalla:/home/marius# cp -f /etc/resolv.conf backups/
+
+root@valhalla:/home/marius# cp -f /etc/hosts backups/
+
+root@valhalla:/home/marius# cp -f /boot/grub/menu.lst backups/
+
+root@valhalla:/home/marius# cp -f /etc/network/interfaces backups/
+
+root@valhalla/home/marius# dpkg –get-selections >> backups/packagelist
+
+
+*Now do a quick ls (list) of the Backups directory*
+bq. p. root@valhalla:/home/marius# ls backups
+
+fstab&nbsp; menu.lst&nbsp; packagelist&nbsp; sources.list&nbsp; xorg.conf.20080119182617
+
+hosts&nbsp; modules&nbsp; &nbsp;resolv.conf&nbsp; xorg.conf&nbsp; &nbsp; &nbsp;xorg.conf.failsafe
+
+root@valhalla:/home/marius#
+
+
+
+p. Yup! all there
+
+
+p. Now burn them to a CD, put them on a USB pendrive, write them on the wall with lipstick…. I don’t care, just keep them safe ;)
+
+
+

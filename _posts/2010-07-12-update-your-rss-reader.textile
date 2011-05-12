@@ -1,0 +1,14 @@
+---
+layout: post
+title: Update your RSS reader
+categories: 
+- feedburner
+- Personal
+- rss
+---
+
+I've changed the location of this RSS feed to the following:
+
+<a href="http://feeds.feedburner.com/mariusv">http://feeds.feedburner.com/mariusv</a>
+
+Please update your RSS reader if you haven't already, as the old feed will be removed.

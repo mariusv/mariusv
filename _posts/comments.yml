@@ -1,0 +1,926 @@
+--- !ruby/object:Comment 
+author_email: ""
+author_name: broke my router - Page 2
+author_url: http://www.linuxquestions.org/questions/linux-wireless-networking-41/broke-my-router-800044/page2.html#post3954484
+content: "[...] to use the command line to edit the /etc/interfaces file and then restart networking. Procedures here and here. Make a backup copy of your existing interfaces file!!! You will want to restore it after [...] "
+created_at: 2010-05-02 12:57:25 +03:00
+post_id: "6"
+post_title: Ubuntu Linux convert DHCP network configuration to static IP configuration
+
+--- !ruby/object:Comment 
+author_email: dan@apexis.ro
+author_name: xdanx
+author_url: ""
+content: |-
+  Hello. Nice article. A little improvement i suggest : 
+  instead of 
+  # established connections
+  NETSTAT=`netstat -na |grep -i esta |grep -v 127.0.0.1 |sort -n -t. -k2` 
+  i'd go for 
+  NETSTAT=`netstat -pna |grep -i esta |grep -v 127.0.0.1 |sort -n -t. -k2` 
+  
+  Have a nice day
+created_at: 2010-02-17 20:50:34 +02:00
+post_id: "13"
+post_title: Linux script to collect system statistics and send to your email
+
+--- !ruby/object:Comment 
+author_email: nardybackgammon@aol.com
+author_name: madLyfe
+author_url: http://www.openstreetmap.org/user/emmatwin
+content: You have really great taste on catch article titles, even when you are not interested in this topic you push to read it
+created_at: 2010-04-17 11:42:57 +03:00
+post_id: "13"
+post_title: Linux script to collect system statistics and send to your email
+
+--- !ruby/object:Comment 
+author_email: robert@hoekstra.nu
+author_name: rhoekstra
+author_url: http://www.hoekstra.nu
+content: |-
+  How nice document.. the CONNMARK is new to me and to be able to save and restore the marks is what I'm looking for !! thanks...
+  
+  By the way, your quotes are shown wrong in my browsers (IE - on windows and Firefox, Konqueror on Linux). There seems to be a character encoding issue, you might want to look into that.. the quotes (like in "we've" show as three characters now.
+  
+  Cheers.
+created_at: 2010-07-21 12:37:32 +03:00
+post_id: "20"
+post_title: Netfilter/iptables split access with multiple ISPs
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Thanks..yes i know...i will repair them but right now i don`t have to much time:(
+created_at: 2010-07-21 17:27:32 +03:00
+post_id: "20"
+post_title: Netfilter/iptables split access with multiple ISPs
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: IPTABLES - CENTOS - Redirection
+author_url: http://www.linuxquestions.org/questions/linux-networking-3/iptables-centos-redirection-834822/#post4111050
+content: "[...] the packets should be directed to the seperate routing table.  You might find this link useful: http://www.mariusv.com/netfilteripta...multiple-isps/ Where, in your case, your two ISPs are not on separate interfaces but on separate gateways. The [...] "
+created_at: 2010-09-28 09:59:15 +03:00
+post_id: "20"
+post_title: Netfilter/iptables split access with multiple ISPs
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Grant remote access to MySQL | A Sysadmin life | Drakz Free Online Service
+author_url: http://www.drakz.com/online/mysql/?p=2042
+content: "[...] original post here: Grant remote access to MySQL | A Sysadmin life   Share and [...] "
+created_at: 2010-02-17 22:27:45 +02:00
+post_id: "26"
+post_title: Grant remote access to MySQL
+
+--- !ruby/object:Comment 
+author_email: asdfjieieie@asdf.com
+author_name: emt training
+author_url: http://www.emttrainingcourse.com/
+content: "Wow this is a great resource.. I\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2m enjoying it.. good article"
+created_at: 2010-04-09 12:14:56 +03:00
+post_id: "29"
+post_title: Linux and Windows OpenVPN HOWTO and tutorial, including VPN routing
+
+--- !ruby/object:Comment 
+author_email: pausleal@simps.com
+author_name: school grants
+author_url: http://www.topschoolgrants.org
+content: My cousin recommended this blog and she was totally right keep up the fantastic work!
+created_at: 2010-05-03 08:25:29 +03:00
+post_id: "29"
+post_title: Linux and Windows OpenVPN HOWTO and tutorial, including VPN routing
+
+--- !ruby/object:Comment 
+author_email: pausleal@simps.com
+author_name: Autism Symptoms
+author_url: http://www.autismsymptomsblog.com
+content: "Great information! I\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2ve been looking for something like this for a while now. Thanks!"
+created_at: 2010-05-20 07:56:12 +03:00
+post_id: "29"
+post_title: Linux and Windows OpenVPN HOWTO and tutorial, including VPN routing
+
+--- !ruby/object:Comment 
+author_email: Ibraham@gmail.com
+author_name: Yerby
+author_url: ""
+content: Thanks for a great post. Keep up the good work!
+created_at: 2010-10-19 11:28:00 +03:00
+post_id: "49"
+post_title: How to block/allow packets sent by specific Operating System with iptables?
+
+--- !ruby/object:Comment 
+author_email: asdfjieieie@asdf.com
+author_name: nursing schools
+author_url: http://www.nursingschoolsinfo.com/
+content: "Great information! I\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2ve been looking for something like this for a while now. Thanks!"
+created_at: 2010-04-19 05:28:25 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: gnix@phonoscope.com
+author_name: Gary Nix
+author_url: ""
+content: could you provide some information on installing Automatic Zombie (shell script)because I am trying to get it to work.
+created_at: 2010-04-13 19:25:14 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: "You just need to put the script in /bin and make an cronjob  to run at every lets say 10 minutes or half hour...if you can`t manage that you find me on gtalk: marius.voila or skype: marius.voila"
+created_at: 2010-04-13 19:35:15 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: And if this plugin don`t help you you can look in the server logs to see what errors you have...i suppose you have access to logs
+created_at: 2010-09-23 17:11:31 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: calv_10@yahoo.com
+author_name: Calvin
+author_url: http://www.calvinshub.com
+content: |-
+  hi marius,
+  
+  hope you could help me out here. i'm having problem with my wordpress site because my hosting says it creates zombie processes and it gets suspended every week or so. for the life of me, i can't seem to figure out what plugin has been causing it. i didn't add anything new. 
+  
+  well anyway, do you think this script you did is applicable to my wordpress site? i'm not sure if im allowed to add anything to the bin directory since it's a shared hosting plan. have to check later when i get home. but can you teach me how to run a cron job for this script? i saw a cron icon in my cpanel.
+  
+  hope you could help man. thanks!
+created_at: 2010-09-23 16:41:51 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Sadly this script is not working on a shared hosting...
+created_at: 2010-09-23 16:45:04 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: calv_10@yahoo.com
+author_name: Calvin
+author_url: http://www.calvinshub.com
+content: ahh crap just my luck. :( thanks for the quick reply man. hmm, while you here, can you give me a tip on how to track which plugin is causing my problems. i already disabled recent plugins that i installed.
+created_at: 2010-09-23 16:59:59 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Is ok what you did...and you can try this plugin http://urbangiraffe.com/plugins/audit-trail/
+created_at: 2010-09-23 17:03:18 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: calv_10@yahoo.com
+author_name: Calvin
+author_url: http://www.calvinshub.com
+content: thanks man. I installed it. what should i be looking out for? I'll probably get enough data by tomorrow or the following day.
+created_at: 2010-09-23 17:08:43 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: calv_10@yahoo.com
+author_name: Calvin
+author_url: http://www.calvinshub.com
+content: hi marius, what should i look for in audit trail? all i see are visits people make in my site. how will i know zombie processes from that? am i missing something? thanks once again for all your help.
+created_at: 2010-09-24 06:09:04 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Hmmm..maybe will be better to look in the server logs. I suspect that or your apache or your mysql server is hanging..so look in the logs.
+created_at: 2010-09-24 08:17:52 +03:00
+post_id: "51"
+post_title: Automatic "zombie" processes killing (shell script)
+
+--- !ruby/object:Comment 
+author_email: jjmichael@ua-news.net
+author_name: jjMichael
+author_url: http://clomid.umarker.eu
+content: No. But now i will. Thanks for that.
+created_at: 2010-04-21 09:15:15 +03:00
+post_id: "57"
+post_title: Enabling IPv6 Support in nginx
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Monitoring MySQL Replication with Munin and mk-heartbeat | A &#8230; | Drakz Free Online Service
+author_url: http://www.drakz.com/online/mysql/?p=2273
+content: "[...] here to see the original: Monitoring MySQL Replication with Munin and mk-heartbeat | A &#8230;   Share and [...] "
+created_at: 2010-02-25 20:51:55 +02:00
+post_id: "63"
+post_title: Monitoring MySQL Replication with Munin and mk-heartbeat
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Unlimited Personal Email &#8211; Unlimited Mysql &#8211; video | World online hosting review
+author_url: http://hosting.worldonlinereview.com/2010/02/25/unlimited-personal-email-unlimited-mysql-video/
+content: "[...] Monitoring MySQL Replication with Munin and mk-heartbeat | A &#8230; [...] "
+created_at: 2010-02-27 11:07:07 +02:00
+post_id: "63"
+post_title: Monitoring MySQL Replication with Munin and mk-heartbeat
+
+--- !ruby/object:Comment 
+author_email: pausleal@simps.com
+author_name: Autism Symptoms
+author_url: http://www.autismsymptomsblog.com
+content: "Great site. A lot of useful information here. I\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2m sending it to some friends!"
+created_at: 2010-05-12 14:18:54 +03:00
+post_id: "63"
+post_title: Monitoring MySQL Replication with Munin and mk-heartbeat
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Logging replication lag with munin. | GGC-Devblog
+author_url: http://devblog.ggc-stream.com/?p=118
+content: "[...] lag of your MySQL Slave server using &quot;Seconds_Behind_Master&quot; from &quot;SHOW SLAVE STATUS&quot;. There are many approaches on the web but I didn&#039;t found a really simple [...] "
+created_at: 2010-07-21 19:44:29 +03:00
+post_id: "63"
+post_title: Monitoring MySQL Replication with Munin and mk-heartbeat
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Howto protect services like SSH against brute force using only &#8230;
+author_url: http://atsclients.com/?p=36636
+content: "[...] See the original post here: Howto protect services like SSH against brute force using only &#8230; [...] "
+created_at: 2010-03-08 11:09:22 +02:00
+post_id: "67"
+post_title: Howto protect services like SSH against brute force using only IPtables
+
+--- !ruby/object:Comment 
+author_email: cs.kedaihost@yahoo.com
+author_name: KedaiHost
+author_url: http://www.kedaihost.com
+content: Nice information, thanks... But when i try in opera browser, your image is struglle
+created_at: 2010-04-05 12:05:48 +03:00
+post_id: "67"
+post_title: Howto protect services like SSH against brute force using only IPtables
+
+--- !ruby/object:Comment 
+author_email: goshiqnwzx@aol.com
+author_name: Noble Hadef
+author_url: http://zeroskateboards.org/
+content: their is often a difficulty in the very first spot.
+created_at: 2010-10-05 00:57:52 +03:00
+post_id: "67"
+post_title: Howto protect services like SSH against brute force using only IPtables
+
+--- !ruby/object:Comment 
+author_email: Searcy@yahoo.com
+author_name: Ferres Art
+author_url: http://www.ferres-art.com/
+content: Have you got twitter page friend? In order to stay with your website
+created_at: 2010-10-13 23:16:41 +03:00
+post_id: "67"
+post_title: Howto protect services like SSH against brute force using only IPtables
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Yes <a href="http://twitter.com/abisdemon" rel="nofollow">abisdemon</a> is my twitter page
+created_at: 2010-10-14 07:04:57 +03:00
+post_id: "67"
+post_title: Howto protect services like SSH against brute force using only IPtables
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: Wordpress Themes
+author_url: http://genericwpthemes.com
+content: Genial dispatch and this enter helped me alot in my college assignement. Thanks you seeking your information.
+created_at: 2010-06-13 09:03:21 +03:00
+post_id: "86"
+post_title: Ping entire subnet
+
+--- !ruby/object:Comment 
+author_email: asdfjieieie@asdf.com
+author_name: emt training
+author_url: http://www.emttrainingcourse.com/
+content: What a great resource!
+created_at: 2010-04-20 04:36:14 +03:00
+post_id: "114"
+post_title: Shrink or resize logical volumes LVM on RHEL
+
+--- !ruby/object:Comment 
+author_email: ftiiansjese@gawab.com
+author_name: tiffany and co
+author_url: http://www.tiffanyjewellery4u.com/
+content: Thanks for sharing this.
+created_at: 2010-05-02 20:38:28 +03:00
+post_id: "114"
+post_title: Shrink or resize logical volumes LVM on RHEL
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: WP Themes
+author_url: http://genericwpthemes.com
+content: Good dispatch and this enter helped me alot in my college assignement. Say thank you you for your information.
+created_at: 2010-05-01 23:05:48 +03:00
+post_id: "114"
+post_title: Shrink or resize logical volumes LVM on RHEL
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: Wordpress Themes
+author_url: http://genericwpthemes.com
+content: Good post and this post helped me alot in my college assignement. Say thank you you seeking your information.
+created_at: 2010-07-01 01:49:04 +03:00
+post_id: "114"
+post_title: Shrink or resize logical volumes LVM on RHEL
+
+--- !ruby/object:Comment 
+author_email: themall@mainru.com
+author_name: !binary |
+  w5DFocOQwr7DkMK9w5HCgcOR4oCaw5DCsMOQwr3DkeKAmsOQwrjDkMK9
+
+author_url: http://www.foxvideos.ru/
+content: !binary |
+  w5DigJjDkcaSw5DCtMORxpIgw5DCt8OQwr3DkMKww5HigJrDkcWSLCDDkMKx
+  w5DCvsOQwrvDkcWSw5HLhsOQwr7DkMK1IMORwoHDkMK/w5DCsMORwoHDkMK4
+  w5DCscOQwr4gw5DCt8OQwrAgw5DCv8OQwr7DkMK8w5DCvsOR4oCww5HFkiDD
+  kMKyIMORwo3DkeKAmsOQwr7DkMK8IMOQwrLDkMK+w5DCv8OR4oKsw5DCvsOR
+  woHDkMK1Lg==
+
+created_at: 2010-04-14 12:58:58 +03:00
+post_id: "122"
+post_title: "Atom&ION board replaces my old fileserver "
+
+--- !ruby/object:Comment 
+author_email: anand8227@gmail.com
+author_name: anand
+author_url: ""
+content: |-
+  good work marius........ 
+  things like these will help us,aspiring network admins learn ...
+  
+  keep rocking
+created_at: 2011-01-20 09:14:46 +02:00
+post_id: "130"
+post_title: System and Network Administrator's Tasks
+
+--- !ruby/object:Comment 
+author_email: dvlaur@gmail.com
+author_name: Laur
+author_url: http://www.vplay.ro
+content: |-
+  Hmm
+  I suggest Last Backup or Backup Savior.
+created_at: 2010-05-03 09:27:50 +03:00
+post_id: "137"
+post_title: Help give an name
+
+--- !ruby/object:Comment 
+author_email: sukh.jinder@live.com
+author_name: jin
+author_url: http://divxsite.net
+content: |-
+  Its great to see you working again, you have been very lazy recently. Keep up the good work. Cheers to you.
+  
+  
+  Jin
+created_at: 2010-04-17 13:48:22 +03:00
+post_id: "146"
+post_title: Lazy sysadmin..poor puppet
+
+--- !ruby/object:Comment 
+author_email: will49572@gmail.com
+author_name: how much should i weigh
+author_url: http://howmuchshouldiweigh.org
+content: hey whats your myspace page.
+created_at: 2010-06-17 05:42:51 +03:00
+post_id: "146"
+post_title: Lazy sysadmin..poor puppet
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Sorry dude..I don`t have a myspace page.
+created_at: 2010-06-18 08:44:01 +03:00
+post_id: "146"
+post_title: Lazy sysadmin..poor puppet
+
+--- !ruby/object:Comment 
+author_email: Meaganyaknow@gmail.com
+author_name: armando codina
+author_url: http://www.webwire.com/ViewPressRel.asp?aId=118707
+content: Thank you so much for writing all of the excellent information!  I am looking forward to checking out more.
+created_at: 2010-09-08 03:23:35 +03:00
+post_id: "146"
+post_title: Lazy sysadmin..poor puppet
+
+--- !ruby/object:Comment 
+author_email: asdfesaf@sadf.com
+author_name: MarkSpizer
+author_url: http://www.yams.com
+content: great post as usual!
+created_at: 2010-05-02 15:13:12 +03:00
+post_id: "160"
+post_title: Rent a SysAdmin
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Install Apache and PHP 5 on FreeBSD | Once a geek, forever a geek&#8230; &laquo; apache
+author_url: http://apache.darmowe-blogi.pisz.pl/bez-kategorii/install-apache-and-php-5-on-freebsd-once-a-geek-forever-a-geek.html
+content: "[...] Pe\xC3\x85\xE2\x80\x9Any artyku\xC3\x85\xE2\x80\x9A na: Install Apache and PHP 5 on FreeBSD | Once a geek, forever a geek&#8230; [...] "
+created_at: 2010-06-07 18:16:59 +03:00
+post_id: "174"
+post_title: Install Apache and PHP 5 on FreeBSD
+
+--- !ruby/object:Comment 
+author_email: mariusv.com@tange.dk
+author_name: Ole Tange
+author_url: http://ole.tange.dk
+content: If some of the filenames contain space, ' or ", then the find/xargs combination may not work. GNU Parallel http://www.gnu.org/software/parallel/ does not have this problem. Watch the intro video at http://www.youtube.com/watch?v=LlXDtd_pRaY
+created_at: 2010-06-19 00:35:37 +03:00
+post_id: "186"
+post_title: Cleaning off a Hacked Site
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: WP Themes
+author_url: http://genericwpthemes.com
+content: Amiable brief and this enter helped me alot in my college assignement. Thanks you as your information.
+created_at: 2010-06-22 13:02:16 +03:00
+post_id: "186"
+post_title: Cleaning off a Hacked Site
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: RAID 5 Data Recovery - Is there a software RAID solution for Windows 98?
+author_url: http://www.raid5-datarecovery.com/is-there-a-software-raid-solution-for-windows-98/
+content: "[...] Importance of RAID | Once a geek, forever a geek&#8230; [...] "
+created_at: 2010-06-18 10:24:25 +03:00
+post_id: "191"
+post_title: Importance of RAID
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: WP Themes
+author_url: http://genericwpthemes.com
+content: Nice post and this enter helped me alot in my college assignement. Gratefulness you as your information.
+created_at: 2010-07-25 06:33:25 +03:00
+post_id: "191"
+post_title: Importance of RAID
+
+--- !ruby/object:Comment 
+author_email: nokoya@hostinginside.com
+author_name: nokoya
+author_url: ""
+content: |-
+  Hello there,
+  
+  I notice that proxy_ndp isnt available in Centos. do you ever try this setting on centos ?
+created_at: 2010-07-28 18:22:36 +03:00
+post_id: "195"
+post_title: OpenVZ and IPv6 configuration
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: in CentOS i did not try..sorry
+created_at: 2010-07-28 18:29:28 +03:00
+post_id: "195"
+post_title: OpenVZ and IPv6 configuration
+
+--- !ruby/object:Comment 
+author_email: lars.bailey@gmail.com
+author_name: Lars Bailey
+author_url: ""
+content: |-
+  IPv6 networking for OpenVZ containers,is no more difficult to setup,than configuring IPv4.
+  I use IPv6 exclusively,using a combination of  RedHat and Debian containers.
+  (non-bridged and bridged virtual Ethernet)
+  The use of Proxy_NDP,is not a requirement,although it is often demonstrated in OVZ documentation.
+  It has the same effect,as using ProxyARP for IPv4.
+  This means,all containers are reachable from within a container.
+  You can use the IP command,to add neighbors manually,if you need to.
+  As long as you have traffic flow coming from a container,you can use;
+  
+  ip -6 neigh show
+  
+  on the Node,and all neighboring IPv6 containers are visible.
+  As far as VENET,I do not used it.
+  I find it limiting,in the types of applications that can be ran in a container.
+  In short,if you want RedHat containers to have IPv6 networking,follow the same IPv6 rules as a physical machine.
+  For Debian,the same rules apply,sans "modprobe ipv6".(this is not needed)
+  As a side note,OVZ docs do have a "lacking" feature to them.
+  
+  Regards
+  
+  L.
+created_at: 2010-12-28 00:43:06 +02:00
+post_id: "195"
+post_title: OpenVZ and IPv6 configuration
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: How to sync your djbdns zones with rsync | Once a geek, forever a geek...
+author_url: http://www.mariusv.com/how-to-sync-your-djbdns-zones-with-rsync/
+content: "[...] wrote earlier about publishing zones with djbdns. That post didn\xC3\xA2\xE2\x82\xAC\xE2\x84\xA2t cover zone sync between djbdns servers. This [...] "
+created_at: 2010-06-27 11:21:13 +03:00
+post_id: "217"
+post_title: How to djbdns
+
+--- !ruby/object:Comment 
+author_email: ala234l@gawab.com
+author_name: Wordpress Themes
+author_url: http://genericwpthemes.com
+content: Amiable brief and this enter helped me alot in my college assignement. Thank you seeking your information.
+created_at: 2010-07-10 16:37:46 +03:00
+post_id: "224"
+post_title: Distributed filesystem with GlusterFS
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Rackspace Cloud vs. Amazon EC2 | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/rackspace-cloud-vs-amazon-ec2/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Ed Leafe and Cynthia, Jackie Davis. Jackie Davis said: Rackspace Cloud vs Amazon EC2 performance results http://bit.ly/94IUnS [...] "
+created_at: 2010-06-29 19:08:33 +03:00
+post_id: "227"
+post_title: Rackspace Cloud vs. Amazon EC2
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: "Yes you can :) and yes I have a twitter account: http://twitter.com/abisdemon ;)"
+created_at: 2010-07-14 13:34:21 +03:00
+post_id: "227"
+post_title: Rackspace Cloud vs. Amazon EC2
+
+--- !ruby/object:Comment 
+author_email: bh8921@gmail.com
+author_name: vikalee
+author_url: http://www.polprav.blogspot.com/
+content: |-
+  I want to quote your post in my blog. It can?
+  And you et an account on Twitter?
+created_at: 2010-07-14 12:07:45 +03:00
+post_id: "227"
+post_title: Rackspace Cloud vs. Amazon EC2
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: "Nginx vs Apache = 1 \xE2\x80\x93 0 | Once a geek, forever a geek&#8230; &laquo; apache"
+author_url: http://apache.darmowe-blogi.pisz.pl/bez-kategorii/nginx-vs-apache-1-%e2%80%93-0-once-a-geek-forever-a-geek.html
+content: "[...] Adres URL: Nginx vs Apache = 1 \xE2\x80\x93 0 | Once a geek, forever a geek&#8230; [...] "
+created_at: 2010-07-02 11:45:12 +03:00
+post_id: "262"
+post_title: Nginx vs Apache = 1 - 0
+
+--- !ruby/object:Comment 
+author_email: john@inklein.us
+author_name: John
+author_url: ""
+content: Hi, did you follow any guides that were helpful in switching from apache to Nginx for Joomla sites?
+created_at: 2010-07-22 19:59:33 +03:00
+post_id: "262"
+post_title: Nginx vs Apache = 1 - 0
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Wordpress cache and Nginx | Once a geek, forever a geek&#8230; &laquo; cache
+author_url: http://cache.darmowe-blogi.pisz.pl/bez-kategorii/wordpress-cache-and-nginx-once-a-geek-forever-a-geek.html
+content: "[...] Zobacz reszt\xC4\x99 artyku\xC5\x82u: Wordpress cache and Nginx | Once a geek, forever a geek&#8230; [...] "
+created_at: 2010-07-01 11:23:57 +03:00
+post_id: "268"
+post_title: Wordpress cache and Nginx
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Radiotray radio player for Ubuntu | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/radiotray-radio-player-for-ubuntu/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Nexus, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Radiotray radio player for Ubuntu http://goo.gl/fb/QbvlK [...] "
+created_at: 2010-07-16 14:55:53 +03:00
+post_id: "306"
+post_title: Radiotray radio player for Ubuntu
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: novatillasku.com &raquo; Blog Archive &raquo; Radio Tray, reproductor de radio para Ubuntu 10.04
+author_url: http://novatillasku.com/2010/07/15/radio-tray-reproductor-radio-ubuntu/
+content: "[...] tareas.  Y c\xC3\xB3mo siempre que busco encuentro, Marius Voila, me trajo la soluci\xC3\xB3n en bandeja desde su blog.  Se trata de Radio Tray, que se instala por consola con un simple apt-get install radiotray y [...] "
+created_at: 2010-07-15 19:32:32 +03:00
+post_id: "306"
+post_title: Radiotray radio player for Ubuntu
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: ":) I'm the hoster of this blog :)"
+created_at: 2010-10-09 08:18:23 +03:00
+post_id: "319"
+post_title: RackSpace Cloud new server script
+
+--- !ruby/object:Comment 
+author_email: info@logikdirect.com
+author_name: WebSite Guy
+author_url: http://www.logikdirect.com
+content: Hey, just checking out your site... Liking the design and the layout.. Who is your web host ?? also the content is a great read .. thanks
+created_at: 2010-10-09 05:20:34 +03:00
+post_id: "319"
+post_title: RackSpace Cloud new server script
+
+--- !ruby/object:Comment 
+author_email: pestaa@nyugtalanver.hu
+author_name: pestaa
+author_url: ""
+content: |-
+  Hi Marius,
+  
+  I'm working on similar scripts, and your gists are really helpful, thanks. :)
+  
+  Greetings from Hungary
+created_at: 2010-12-14 16:59:17 +02:00
+post_id: "319"
+post_title: RackSpace Cloud new server script
+
+--- !ruby/object:Comment 
+author_email: myself@mariusv.com
+author_name: Myself
+author_url: http://www.mariusv.com
+content: I'm glad I could help
+created_at: 2010-12-14 20:23:48 +02:00
+post_id: "319"
+post_title: RackSpace Cloud new server script
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: What is cloud computing in simple terms.. | Once a geek, forever a &#8230; | Comparescales.com
+author_url: http://www.comparescales.com/platform-scales/what-is-cloud-computing-in-simple-terms-once-a-geek-forever-a.html
+content: "[...] more from the original source: What is cloud computing in simple terms.. | Once a geek, forever a &#8230;  This entry was posted in Platform Scales and tagged a-better-machine, bandwidth, better-machine, [...] "
+created_at: 2010-07-26 13:36:53 +03:00
+post_id: "338"
+post_title: What is cloud computing in simple terms..
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention What is cloud computing in simple terms.. | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/what-is-cloud-computing-in-simple-terms/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by The Biz Loft Italia, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: What is cloud computing in simple terms.. http://goo.gl/fb/sVGCs [...] "
+created_at: 2010-07-26 13:43:41 +03:00
+post_id: "338"
+post_title: What is cloud computing in simple terms..
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: "Happy Sysadmin Appreciation Day- sysadmin day 2010 \xE2\x80\x94 CloudLock"
+author_url: http://blog.cloudlock.com/2010/07/30/happy-sysadmin-appreciation-day/
+content: "[...] Confessions of a system administrator has a Happy Sysadmin Day post [...] "
+created_at: 2011-04-04 21:07:37 +03:00
+post_id: "350"
+post_title: Happy SysAdmin Day!!
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: "A fost flosscamp 2010 | LUG Mure\xC5\x9F"
+author_url: http://www.lug-mures.org/2010/08/14/a-fost-flosscamp-2010/
+content: "[...] http://www.mariusv.com/back-from-flosscamp-2010/ [...] "
+created_at: 2010-08-14 11:19:00 +03:00
+post_id: "357"
+post_title: Back from FLOSSCamp 2010
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Split and merge pdf files in Ubuntu | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/split-and-merge-pdf-files-in-ubuntu/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Alexandru Burlacu, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Split and merge pdf files in Ubuntu http://goo.gl/fb/lOiuY [...] "
+created_at: 2010-08-18 13:19:00 +03:00
+post_id: "362"
+post_title: Split and merge pdf files in Ubuntu
+
+--- !ruby/object:Comment 
+author_email: mail.fal1sh@gmail.com
+author_name: flienteen
+author_url: http://flienteen.blogspot.com
+content: "<CODE>function isINetAddress($ipaddr)\r\n\
+  {\r\n    return (boolean)preg_match( \"/^((?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9]).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9]?[0-9])$/m\",$ipaddr);\r\n\
+  }</CODE>\r\n\
+  de ce nu a\xC8\x99a? plus dac\xC4\x83 nu coincide returneaz\xC4\x83 <STRONG>false</STRONG> \xC3\xAEn loc de <STRONG>null</STRONG>.."
+created_at: 2010-08-26 14:22:27 +03:00
+post_id: "370"
+post_title: Verify IPv4 address in php using regex
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: "Merge \xC8\x99i a\xC8\x99a :)"
+created_at: 2010-08-27 13:36:49 +03:00
+post_id: "370"
+post_title: Verify IPv4 address in php using regex
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention No sound problem in Ubuntu | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/no-sound-problem-in-ubuntu/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Ubuntu Feed, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: No sound problem in Ubuntu http://goo.gl/fb/B1MXU [...] "
+created_at: 2010-08-31 10:37:14 +03:00
+post_id: "373"
+post_title: No sound problem in Ubuntu
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: eBook Converter &#8211; Calibre &#8211; Ubuntu 9.10 | All You Need
+author_url: http://onemill.ws/?p=333
+content: "[...] No sound problem in Ubuntu | Once a geek, forever a geek&#8230; [...] "
+created_at: 2010-09-01 00:26:42 +03:00
+post_id: "373"
+post_title: No sound problem in Ubuntu
+
+--- !ruby/object:Comment 
+author_email: ajoian@gmail.com
+author_name: adrian joian
+author_url: ""
+content: |-
+  I see a lot this type of commands :
+  
+  cat filename | grep "phrase"
+  
+  They are not wrong but are perpetuated by admins, I really can't understand why :).
+created_at: 2010-08-31 21:04:57 +03:00
+post_id: "377"
+post_title: Grep Sed and Awk
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Cisco Virtual Private Network with Network Manager | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/cisco-virtual-private-network-with-network-manager/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Stefan, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Cisco Virtual Private Network with Network Manager http://goo.gl/fb/yLYIr [...] "
+created_at: 2010-09-17 16:29:50 +03:00
+post_id: "456"
+post_title: Cisco Virtual Private Network with Network Manager
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Find duplicate files | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/find-duplicate-files/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Alexandru Burlacu, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Find duplicate files http://goo.gl/fb/JkRaT [...] "
+created_at: 2010-10-06 13:54:49 +03:00
+post_id: "491"
+post_title: Find duplicate files
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Python script to backup mysql databases on Debian servers | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/python-script-to-backup-mysql-databases-on-debian-servers/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Matteo Di Carlo, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Python script to backup mysql databases on Debian servers http://goo.gl/fb/COa4F [...] "
+created_at: 2010-10-02 21:24:36 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: kodxxx@gmail.com
+author_name: kodx
+author_url: ""
+content: Just install backup-manager from debian repositories. It can do much more.
+created_at: 2010-10-03 22:34:07 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: "Debian Linux: \xD0\x9F\xD0\xBE\xD1\x81\xD0\xBE\xD0\xB1\xD0\xB8\xD0\xB5 \xD0\xB4\xD0\xBB\xD1\x8F \xD0\xB3\xD0\xBE\xD0\xBF\xD0\xBD\xD0\xB8\xD0\xBA\xD0\xBE\xD0\xB2 &raquo; Blog Archive &raquo; Python script to backup mysql databases on Debian servers"
+author_url: http://gopodebian.com/python-script-to-backup-mysql-databases-on-debian-servers/
+content: "[...] Here\xE2\x80\x99s a short python script I must have knocked up some time ago \xE2\x80\x93 and totally forgotten \xE2\x80\x93 hopefully it\xE2\x80\x99ll be of some use to others\xE2\x80\xA6.Purpose: backup all MySQL databases, one in each file with a timestamp on the end. You\xE2\x80\x99ll probably want to have a secondary cron job which does something like&#8230;&#8230;.. More here [...] "
+created_at: 2010-10-03 04:09:01 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Python script to backup mysql databases on Debian servers | Debian-News.net - Your one stop for news about Debian
+author_url: http://www.debian-news.net/2010/10/01/python-script-to-backup-mysql-databases-on-debian-servers/
+content: "[...] Here\xE2\x80\x99s a short python script I must have knocked up some time ago \xE2\x80\x93 and totally forgotten \xE2\x80\x93 hopefully it\xE2\x80\x99ll be of some use to others\xE2\x80\xA6.Purpose: backup all MySQL databases, one in each file with a timestamp on the end. You\xE2\x80\x99ll probably want to have a secondary cron job which does something like&#8230;&#8230;.. More here [...] "
+created_at: 2010-10-01 23:52:27 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Yes...but I'm old school..:)
+created_at: 2010-10-05 09:22:16 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: aorth@thefro.org
+author_name: Alan
+author_url: http://alaninkenya.org
+content: I just stumbled upon this, and it's much more elegant than the shell scripts I always whip up.  Thanks!
+created_at: 2010-10-07 12:14:16 +03:00
+post_id: "497"
+post_title: Python script to backup mysql databases on Debian servers
+
+--- !ruby/object:Comment 
+author_email: militarutomita@gmail.com
+author_name: tomitzel
+author_url: http://tomitzel.com
+content: Useful, you can also use -h for remote databases.
+created_at: 2010-10-20 12:07:52 +03:00
+post_id: "565"
+post_title: Optimize all tables from all databases
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention The Linux directory structure | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/the-linux-directory-structure/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by Alexandru Burlacu, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: The Linux directory structure http://goo.gl/fb/690iP [...] "
+created_at: 2010-11-01 11:34:43 +02:00
+post_id: "582"
+post_title: The Linux directory structure
+
+--- !ruby/object:Comment 
+author_email: militarutomita@gmail.com
+author_name: tomitzel
+author_url: http://tomitzel.com
+content: Great post, just tried it on my Debian ;)
+created_at: 2010-11-05 13:19:46 +02:00
+post_id: "587"
+post_title: Setting up SSH host shortnames
+
+--- !ruby/object:Comment 
+author_email: marius.voila@gmail.com
+author_name: Mariusv
+author_url: ""
+content: Yep...one of my favorites :P
+created_at: 2010-11-05 13:38:11 +02:00
+post_id: "587"
+post_title: Setting up SSH host shortnames
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: Tweets that mention Free public DNS servers list | Once a geek, forever a geek... -- Topsy.com
+author_url: http://topsy.com/www.mariusv.com/free-public-dns-servers-list/?utm_source=pingback&utm_campaign=L2
+content: "[...] This post was mentioned on Twitter by djatlantic, Marius Voil\xC4\x83. Marius Voil\xC4\x83 said: Free public DNS servers list http://goo.gl/fb/4HO17 [...] "
+created_at: 2010-12-01 09:32:25 +02:00
+post_id: "682"
+post_title: Free public DNS servers list
+
+--- !ruby/object:Comment 
+author_email: isabellad204@yahoo.com
+author_name: conversational hypnosis
+author_url: http://www.hypnosisformula.com
+content: "[...] Perl script for remote ssh login | Once a geek, forever a geek... [...] "
+created_at: 2011-04-14 20:51:30 +03:00
+post_id: "800"
+post_title: Perl script for remote ssh login
+
+--- !ruby/object:Comment 
+author_email: ""
+author_name: bloovis.com &raquo; Linux Mint / Ubuntu tweaks
+author_url: http://www.bloovis.com/wordpress/?p=246
+content: "[...] for F1 and F11, but gnome-terminal uses these as shortcuts for Help and Full Screen, respectively. This page has the solution. To disable F1 in gnome-terminal: Edit / Keyboard Shortcuts. Select action [...] "
+created_at: 2011-04-28 01:22:54 +03:00
+post_id: "828"
+post_title: Disable F1 in gnome-terminal
+
+--- !ruby/object:Comment 
+author_email: myself@mariusv.com
+author_name: Marius Voila
+author_url: http://www.mariusv.com
+content: wow..thanks...It is really cool...god I hate minesweeper :) now I wait to launch Kindle Library Lending :D
+created_at: 2011-04-21 10:40:09 +03:00
+post_id: "845"
+post_title: In love with my new Kindle 3
+
+--- !ruby/object:Comment 
+author_email: silvcoto@yahoo.com
+author_name: dunedenisip
+author_url: http://dunedenisip.wordpress.com
+content: |-
+  For newspapers and magazines i recomand Calibre, is a free tool which can convert your documents in Kindle drm free format (.mobi) and allow to transform an RSS flow in a ebook, so you can read many newspapers for free.
+  If you wanna know what time is when you read a book press Menu button.
+  Kindle firmware has 2 hidden games, press Alt+Shift (the button with an arrow) and M to play Minesweeper.
+created_at: 2011-04-21 10:33:29 +03:00
+post_id: "845"
+post_title: In love with my new Kindle 3
+

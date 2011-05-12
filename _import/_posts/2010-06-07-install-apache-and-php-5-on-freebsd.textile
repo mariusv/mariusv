@@ -1,0 +1,33 @@
+---
+layout: post
+title: Install Apache and PHP 5 on FreeBSD
+permalink: http://www.mariusv.com/install-apache-and-php-5-on-freebsd/index.html
+post_id: 174
+categories: 
+- apache2
+- freeBSD
+- how to
+- php5
+- Tutorials
+---
+
+Install Apache with PHP5 support on FreeBSD is easy when you use the port system. First you must install PHP 5 with _mod_php_ support for Apache:
+<pre># cd /usr/ports/lang/php5
+# make config</pre>
+
+Inside the dialog box you must to select this option:
+
+<pre>APACHE Build Apache module</pre>
+
+To install Apache:
+
+<pre># cd /usr/ports/www/apache22
+# make; make install; make clean</pre>
+
+The /usr/local/etc/apache22/httpd.conf must contains these lines:
+
+<pre># PHP configuration
+AddType application/x-httpd-php .php
+AddType application/x-httpd-php-source .phps
+LoadModule php5_module libexec/apache22/libphp5.so</pre>
+

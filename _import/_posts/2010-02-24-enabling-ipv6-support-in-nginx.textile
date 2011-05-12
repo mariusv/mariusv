@@ -1,0 +1,70 @@
+---
+layout: post
+title: Enabling IPv6 Support in nginx
+permalink: http://www.mariusv.com/enabling-ipv6-support-in-nginx/index.html
+post_id: 57
+categories: 
+- internet
+- ipv6
+- network
+- Nginx
+- Technology
+- tips
+- Tutorials
+---
+
+p. This is going to be a really short post, but for someone it could save an hour of life.
+
+
+p. So, youâ€™ve nothing to do and youâ€™ve decided to play around with <a href="http://en.wikipedia.org/wiki/IPv6">IPv6</a> or maybe youâ€™re happened to be an administrator of a web service that needs to support IPv6 connectivity and you need to make your <a href="http://nginx.org/">nginx</a> server work nicely with this protocol. 
+
+
+p. First thing you need to do is to enable IPv6 in nginx by recompiling it with <code class="codecolorer text dawn"><span class="text">--with-ipv6</span>@ configure option and reinstalling it. If you use some pre-built package, check if your nginx already has this key enabled by running <code class="codecolorer text dawn"><span class="text">nginx -V</span>@. 
+
+
+
+p. <span id="more-362"></span>
+
+
+p. The results should have <code class="codecolorer text dawn"><span class="text">--with-ipv6</span>@ option in configure arguments:
+
+
+
+
+<pre>[root@node ~]# nginx -V
+
+nginx version: nginx/0.7.64
+
+built by gcc 4.1.2 20080704 (Red Hat 4.1.2-46)
+
+TLS SNI support disabled
+
+configure arguments: --with-ipv6 ... --prefix=/opt/nginx</pre>
+
+After youâ€™ve got your nginx binary with IPv6 support, you need to enable it by changing <code class="codecolorer text dawn"><span class="text">listen</span>@ directives in your configuration file. 
+
+
+p. If your server binds to all interfaces/IPs, you already have <code class="codecolorer text dawn"><span class="text">listen 80</span>@ or something like that in your file. Those lines should be changed to make sure you tell your nginx to bind on both IPv4 and IPv6 addresses:
+
+
+
+
+<pre>listen [::]:80;</pre>
+
+p. For situations when you do not want to listen on IPv4 interfaces, there is <code class="codecolorer text dawn"><span class="text">ipv6only=on</span>@ parameter:
+
+
+
+<pre>listen [::]:443 default ipv6only=on;</pre>
+
+For configurations that need to bind to specific ip addresses you could use similar notation:
+
+<pre>listen [2607:f0d0:1004:2::2]:80;</pre>
+
+After changing your configs and testing them you need to restart (not reload) your nginx process and then check your system port bindings to make sure it works as expected:
+
+<pre>[root@node ~]# netstat -nlp | grep nginx
+tcp   0    0 :::80        :::*         LISTEN    23817/nginx
+tcp   0    0 :::443       :::*         LISTEN    23817/nginx</pre>
+
+This is it, now you can add <a href="http://en.wikipedia.org/wiki/IPv6_Addresses#IPv6_addresses_in_the_Domain_Name_System">AAAA</a> records to your main domain name or just create a dedicated <a href="http://ipv6.scribd.com">ipv6</a>.<a href="http://ipv6.google.com">yourcompany</a>.<a href="http://ipv6.netflix.com">com</a> sub-domain and show it to your friends :)

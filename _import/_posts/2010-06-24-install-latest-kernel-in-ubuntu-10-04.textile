@@ -1,0 +1,39 @@
+---
+layout: post
+title: Install latest kernel in Ubuntu 10.04
+permalink: http://www.mariusv.com/install-latest-kernel-in-ubuntu-10-04/index.html
+post_id: 207
+categories: 
+- kernel
+- linux
+- nVidia
+- Tutorials
+- ubuntu
+---
+
+This short walkthrough describes how to get the latest linux kernel working under Ubuntu Linux without having to compile it yourself.
+
+This tutorial should work with the latest version of Ubuntu Linux (10.04 ) and all distributions based on these versions of Ubuntu Linux like Mint.
+
+The included kernel files have been compiled using the generic ubuntu configuration. 
+*Note*: nVIDIA ForceWare drivers are automatically installed using DKMS
+
+*Installation Guide*
+
+1. Download <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-headers-2.6.34-020634_2.6.34-020634_all.deb">linux-headers-2.6.34-020634_2.6.34-020634_all.deb</a>
+
+2. Download your kernel headers package;
+*I386*:  <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-headers-2.6.34-020634-generic_2.6.34-020634_i386.deb">linux-headers-2.6.34-020634-generic_2.6.34-020634_i386.deb</a>
+*AMD64*: <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-headers-2.6.34-020634-generic_2.6.34-020634_amd64.deb">linux-headers-2.6.34-020634-generic_2.6.34-020634_amd64.deb</a>
+
+3. Download your kernel compile;
+*I386*:  <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-image-2.6.34-020634-generic_2.6.34-020634_i386.deb">linux-image-2.6.34-020634-generic_2.6.34-020634_i386.deb</a>
+*AMD64*: <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-image-2.6.34-020634-generic_2.6.34-020634_amd64.deb">linux-image-2.6.34-020634-generic_2.6.34-020634_amd64.deb</a>
+
+4. Install the files in the same order (else it won`t work!)
+
+5. In the terminal run:
+<pre>sudo update-grub</pre>
+
+6. Reboot and select the kernel from the bootloader menu
+For those who want to do their â€œownâ€ compiles, the source is also available; <a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/v2.6.34-lucid/linux-source-2.6.34_2.6.34-020634_all.deb">linux-source-2.6.34_2.6.34-020634_all.deb</a>

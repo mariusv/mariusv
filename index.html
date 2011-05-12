@@ -1,0 +1,47 @@
+---
+layout:   default
+title:    Home 
+--- 
+<div class="span-2 " id="dave-img">  
+  <img id="dave" src="/img/dave.png" alt="me"> 
+</div>
+
+<div class="span-10 last">
+  <p class="first">
+    Hi! I'm a sysadmin <span class="ampersand">&</span> web developer with a passion for FOSS <span class="ampersand">&</span> guitar 
+  </p>
+  
+  <p class="second">    
+    This is my personal website. Here you can find out more <a href="/about.html">about</a> me, see what I'm <a href="{{ site.dribbble }}">working on</a>, have a look through my <a href="/folio.html">portfolio</a> or peruse the <a href="/notebook.html">notebook</a> for my ramblings on development, design, art, politics and anything else that grabs my attention.
+  </p>
+  <p>I respond to emails sent to <a href="mailto:{{ site.email }}">myself@mariusv.com</a>, so feel free to drop me line if you'd like to chat.</p>
+</div>
+
+<div class="span-8">  
+  <h2>Latest ramblings</h2>
+  {% for post in site.posts limit:1 %}
+    {% include post_excerpt.html %}    
+  {% endfor %}
+  <p>
+    For older posts, have a look in the <a href="/archive.html">notebook archive</a>.
+  </p>
+</div>
+<div id="working-on" class="span-4 last">
+<h2>Recent Tweets</h2>
+
+<p class="image">Recently Played:</p>
+		<p>
+		<a class="image" href="http://www.last.fm/user/mariusvoila/"><img src="http://imagegen.last.fm/Arghavan/recenttracks/mariusvoila.gif" /></a>
+		<p>
+
+
+<!--[if lt IE 7]>      
+  <p>
+  Unfortunately, IE 6 is not capable of displaying these images without completely borking the page formatting, so they have been removed.
+  </p>
+  <p>
+  You can go to <a href="{{ site.dribbble }}">Dribble.com</a> to see them full size, or you can download a modern standards compliant browser like <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.com/en-US/firefox/">Firefox</a> or <a href="http://www.apple.com/safari/download/">Safari</a>.
+  <![endif]-->    
+  <div id="mydribbble" >
+  </div>
+</div>

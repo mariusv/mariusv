@@ -1,0 +1,26 @@
+---
+layout: post
+title: Optimize all tables from all databases
+categories: 
+- mysql
+- optimize
+- Personal
+- root
+- Tutorials
+---
+
+The following command will optimize all of your databases' tables within MySQL.
+It is important to optimize tables to reduce data fragmentation.
+<pre lang="bash">mysqlcheck -Aop -uroot</pre>
+If you are not using *root* replace it with your username.
+
+
+
+p. *-A* : Check all tables in all databases. This is the same as using the --databases option and naming all the databases on the command line.
+
+*-o* : optimize the tables.
+
+*-p* : Prompts for a password to use when connecting to the MySQL server.
+
+*-u* : The MySQL user name to use when connecting to the server.
+

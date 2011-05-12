@@ -1,0 +1,21 @@
+---
+layout: post
+title: Debian 6.0 Squeeze to be released with complete free Linux Kernel
+categories: 
+- debian
+- fsf
+- kernel
+- Technology
+---
+
+The Debian project has been working in removing non-free firmware from the Linux kernel shipped with Debian for the past two release cycles. At the time of the releases of&nbsp;<a href="http://www.debian.org/releases/etch/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">Debian 4.0&nbsp;<q>Etch</q></a> and&nbsp;<a href="http://www.debian.org/releases/lenny/" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">5.0<q>Lenny</q></a>, however, it was not yet possible to ship Linux kernels stripped of all non-free firmware bits. Back then we had to acknowledge that freedom issues concerning Linux firmware were&nbsp;<a href="http://www.debian.org/vote/2006/vote_007" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">not completely</a><a href="http://www.debian.org/vote/2008/vote_003" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">sorted out</a>.</span>
+
+
+p. We have nonetheless kept on working on splitting away non-free bits from the Linux kernel, thanks to the work of the&nbsp;<a href="http://wiki.debian.org/DebianKernel" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','wiki.debian.org']);">Debian Kernel team</a> and various Linux upstream developers. We are proud to announce that, to the best of our knowledge, all issues are solved and that we will be able to deliver a Linux kernel which is completely Free, according to the&nbsp;<a href="http://www.debian.org/social_contract#guidelines" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">Debian Free Software Guidelines (DFSG)</a>, with Debian Squeeze. We hereby reaffirm Free Software as one of our priorities, as documented in the&nbsp;<a href="http://www.debian.org/social_contract" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">Debian Social Contract</a>.
+
+
+
+p. In accordance with the Debian Social Contract, we acknowledge that some users require the use of works that do not conform to the DFSG and that those works might include non-free firmware bits. For the time being, we have added to the&nbsp;<q>non-free</q> area of our archives alternative installation images and additional packages for Debian Squeeze, that include non-free firmware bits needed to enable specific pieces of hardware. They are not part of Debian, they should be looked for explicitly by interested users, and we cannot support them to the same extent of Free firmware as we do not have access to the corresponding source code. We encourage hardware manufacturers to release only DFSG-free firmware and we cannot accept other kind of firmware as part of Debian.
+
+
+p. From: <a href="http://www.debian.org/News/2010/20101215" onclick="javascript:_gaq.push(['_trackEvent','outbound-article','www.debian.org']);">http://www.debian.org/News/2010/20101215</a>

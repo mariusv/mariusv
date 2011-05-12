@@ -1,0 +1,52 @@
+---
+layout: post
+title: Debian stop MTA start up at boot and other services
+categories: 
+- debian
+- MTA
+- Personal
+- Tutorials
+---
+
+p. I always get this with wireless and MTA when booting Debian due to the way I configure my network card.
+
+
+p. My Wireless card config is setup in /etc/network/interfaces, nameservers in /etc/resolv.conf, but I use /etc/rc.local to issue my ESSID, WEP pass and restart the network which means that MTA (Mail Transfer Agent, exim4 to be precise) tries to startup at boot but can’t as there isn’t a wireless network connection yet.
+
+
+p. <span style="font-weight: bold;">So how do I disable MTA at boot, or any service for that matter?</span>
+It’s easy, all those services that start at boot are in the /etc/rc2.d directory and only have to be renamed using the mv command.
+
+
+p. 1. cd to /etc/rc2.d
+2. issue the mv Snameofservice Knameofservice
+
+
+p. Here is an example from my Debian Squeeze terminal:
+
+
+
+
+bq. marius@valhalla:~$ cd /etc/rc2.d
+marius@valhalla:/etc/rc2.d$ ls
+README           S20cups           S20openbsd-inetd    S89atd
+S05loadcpufreq   S20exim4          S20policycoreutils  S89cron
+S10sysklogd      S20hotkey-setup   S20rsync            S99rc.local
+S11klogd         S20netapplet      S20wicd             S99rmnologin
+S12acpid         S20nfs-common     S24avahi-daemon     S99stop-bootlogd
+S12dbus          S20nvidia-glx     S30gdm
+S19cpufrequtils  S20nvidia-kernel  S89anacron
+marius@valhalla:/etc/rc2.d$ su -c "mv S20exim4 K20exim4"
+Password: 
+marius@valhalla:/etc/rc2.d$ ls
+K20exim4        S19cpufrequtils   S20openbsd-inetd    S89atd
+README          S20cups           S20policycoreutils  S89cron
+S05loadcpufreq  S20hotkey-setup   S20rsync            S99rc.local
+S10sysklogd     S20netapplet      S20wicd             S99rmnologin
+S11klogd        S20nfs-common     S24avahi-daemon     S99stop-bootlogd
+S12acpid        S20nvidia-glx     S30gdm
+S12dbus         S20nvidia-kernel  S89anacron
+marius@valhalla:/etc/rc2.d$
+
+p. That’s it, painless, took 2 seconds and will knock about a minute off the boot-time on a box which has no network at boot.
+

@@ -1,0 +1,34 @@
+---
+layout: post
+title: How to know which process is going to be the next
+categories: 
+- bash
+- Bash scripts
+- memory
+- Tutorials
+---
+
+If the memory runs out the kernel just use an agent which will try to free some memory by killing those processes which are both old and fat (i.e. use a lot of memory for too long). Every process comes with a score which is constantly updated by the kernel. You can view the score by lurking in /proc/$PID/oom_score.
+
+This article briefly describes how you can find out which process has the biggest change to being killed in a “out of memory” event and how to protect those which are required (e.g. ssh daemon for a remote machine) .
+
+When the OOM killer is called, the process which will most likely be the first victim, is the one with the top score. Here is a little bash script that will show you the running processes sorted by score in ascending order:
+<pre lang="bash">#!/bin/bash
+for file in /proc/[0-9]*/oom_score; do
+	pid=$(echo $file | sed 's/^[^0-9]*\([0-9]\+\).*$/\1/');
+	echo "$(cat $file) $(ps h -p $pid -ocmd)";
+done | sort -n</pre>
+
+If you want to protect a process, you just have to change the value in another special file called oom_adj which resides in the same directory of the proc filesystem.
+While the oom_score contains the current score (more means better chance to be killed by oom_killer), oom_adj is an adjustment that we can use to control the “final chance”; the precise formula is used by OOM killer is:
+@chance to be killed = oom_score * 2^(oom_adj)@
+So, if we want to get half the current score we just have to store “-1″ in oom_adj with:
+@$ echo "-1" >/proc/$PID/oom_adj@
+Other examples:
+@oom_adj = -1 => final_chance = oom_score /2
+oom_adj = -2 => final_chance = oom_score /4
+oom_adj = -3 => final_chance = oom_score /8
+etc.@
+In addition, a value of -17 makes the oom killer ignore that process when seeking for victims.
+
+Nevertheless, please notice that the event in which both memory and swap space are used-up is tragic and should be avoided at any cost. Just add a memory slot or upgrade the one/ones installed and live without the sword of Damocles hanging over your head 

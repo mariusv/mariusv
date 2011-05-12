@@ -1,0 +1,20 @@
+---
+layout: post
+title: Redirecting Apache traffic to a maintenance page
+permalink: http://www.mariusv.com/redirecting-apache-traffic-to-a-maintenance-page/index.html
+post_id: 599
+categories: 
+- apache2
+- htaccess
+- Tutorials
+---
+
+Here’s a simple solution to redirect users to a maintenance page in Apache. This rewrite rule can stay in your config ( _< VirtualHost >_  or _.htaccess_) all the time; all that you need to enable it is to create the file _maintenance.html_.
+
+The first rewrite condition checks to see if the file exists, and only if it does, will it redirect all traffic to it. The second rewrite condition is there to prevent an infinite loop, by only redirecting traffic to files other than _maintenance.html_.
+
+<pre lang="bash">RewriteEngine On
+
+RewriteCond %{DOCUMENT_ROOT}/maintenance.html -f
+RewriteCond %{REQUEST_FILENAME} !/maintenance.html
+RewriteRule ^.*$    /maintenance.html [L]</pre>

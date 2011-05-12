@@ -1,0 +1,26 @@
+---
+layout: page
+title: Archives
+---
+
+<div class="span-12 last">
+  <p id="disclaimer">
+    <em>
+
+<div class="span-3 last" style="float:right"  id="juggler-img">
+<p>
+ <img id="juggler" src="/img/juggler.png" alt="me" >
+</p>
+</div>
+  
+{% for post in site.posts %}
+      {{ post.date | date: "%Y-%m-%d" }}<a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark"><h4>{{ post.title }}</h4></a>
+      {% if post.excerpt.size > 0 %}
+        <div class="archiveblock">
+          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark">{{ post.excerpt }}</a>
+        </div>
+      {% endif %}
+  {% endfor %}
+</em>
+</p>
+</div>

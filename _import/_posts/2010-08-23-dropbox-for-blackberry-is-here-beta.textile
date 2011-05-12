@@ -1,0 +1,16 @@
+---
+layout: post
+title: Dropbox for BlackBerry is here (beta)
+permalink: http://www.mariusv.com/dropbox-for-blackberry-is-here-beta/index.html
+post_id: 366
+categories: 
+- balackberry
+- dropbox
+- Technology
+---
+
+Given Dropbox is available for so many other devices, this latest bit comes with less surprise. That said, it is good news nonetheless. Dropbox has just announced the beta of their BlackBerry app. The catch so far, the app is available in a limited beta, which means you may or may not get access right now. In other words, if you are a BlackBerry user and want Dropbox—stop reading and hit the read link below. Otherwise, the BlackBerry app remains as what we have come to love with Dropbox including a free account that offers 2GB of storage and being able to access your files from a wide variety of devices.
+
+Download from  <a href="https://www.dropbox.com/blackberrybeta">Here</a>
+
+I am on the Beta and I can say that the app is very clean and simple. When you open it you just login and you see all your files. You can see pictures as thumbnails. You can also upload a photo from your BB to your dropbox. There’s a search option if you have a lot of files to go through. As I said this app is simple so the only customizable setting is the cache size that can go from 1 to 60 mb. So far so good!

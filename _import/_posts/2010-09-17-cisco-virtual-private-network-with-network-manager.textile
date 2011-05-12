@@ -1,0 +1,22 @@
+---
+layout: post
+title: Cisco Virtual Private Network with Network Manager
+permalink: http://www.mariusv.com/cisco-virtual-private-network-with-network-manager/index.html
+post_id: 456
+categories: 
+- CISCO
+- debian
+- Personal
+- Tutorials
+- xfce
+---
+
+NetworkManager has pluggable support for Virtual Private Network software, including Cisco compatible VPNs using <a href="http://www.unix-ag.uni-kl.de/%7Emassar/vpnc/">vpnc</a>.
+In a terminal type:
+@aptitude install network-manager-vpnc network-manager-vpnc-gnome@
+After installing network-manager-vpnc and the gui (network-manager-vpnc-gnome) for xfce4 or gnome. Left click the NetworkManager panel icon and select VPN Connections>Configure VPN...
+<a href="http://www.mariusv.com/wp-content/uploads/2010/09/vpnc-configure_1.png"><img src="http://www.mariusv.com/wp-content/uploads/2010/09/vpnc-configure_1.png" alt="" title="vpnc configure_1" width="454" height="326" class="aligncenter size-full wp-image-457" /></a>
+
+From there, import the network's VPN's settings file. After connecting you will be prompted for your password.
+
+<a href="http://www.mariusv.com/wp-content/uploads/2010/09/vpn_configure.png"><img src="http://www.mariusv.com/wp-content/uploads/2010/09/vpn_configure.png" alt="" title="vpn_configure" width="344" height="210" class="aligncenter size-full wp-image-459" /></a>

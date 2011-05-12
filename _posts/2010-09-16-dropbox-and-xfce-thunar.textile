@@ -1,0 +1,14 @@
+---
+layout: post
+title: Dropbox and Xfce (Thunar)
+categories: 
+- dropbox
+- linux
+- Personal
+- thunar
+- xfce
+---
+
+Thunar <a href="http://www.dropbox.com/referrals/NTQxNDE3MDA5">Dropbox</a> is a plugin that adds context-menu items from dropbox into the Thunar file manager.
+<a href="http://www.mariusv.com/wp-content/uploads/2010/09/xfce_dropbox_menu.png"><img src="http://www.mariusv.com/wp-content/uploads/2010/09/xfce_dropbox_menu.png" alt="" title="xfce_dropbox_menu" width="300" height="300" class="aligncenter size-full wp-image-448" /></a>
+So if you use Xfce and dropbox can find a installation .deb on<a href="http://www.softwarebakery.com/maato/thunar-dropbox.html"> maato's softwarebakery site</a>.

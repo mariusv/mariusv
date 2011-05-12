@@ -1,0 +1,100 @@
+---
+layout: post
+title: Linux script to collect system statistics and send to your email
+categories: 
+- email
+- linux
+- sysinfo
+- Tutorials
+---
+
+This script I use to daily send me the system statistics on my gentoo server.
+It will also reformat the output to replace tabs with 5 spaces so it will display nicely on your email client.
+On mail.app the fonts Monaco and Inconsolata displays nicely, but the default font does not.
+
+requirements:
+- app-admin/sysstat
+- net-mail/sendEmail
+- app-admin/procinfo
+- local postfix server able to deliver emails.
+- perl
+
+bq. emerge -va app-admin/sysstat net-mail/sendEmail app-admin/procinfo
+
+Just put the script under /etc/cron.daily
+
+bq. <span style="color: rgb(102, 102, 102); font-style: italic;">#!/bin/bash</span>
+&nbsp;
+<span style="color: rgb(0, 120, 0);">SERVER</span>=<span style="color: rgb(255, 0, 0);">"mydomain.com"</span>
+<span style="color: rgb(0, 120, 0);">EMAIL_TO</span>=<span style="color: rgb(255, 0, 0);">"your_email@gmail.com"</span>
+<span style="color: rgb(0, 120, 0);">EMAIL_FROM</span>=<span style="color: rgb(255, 0, 0);">"amin@mydomain.com"</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># logged in users and what are they running</span>
+<span style="color: rgb(0, 120, 0);">WHO</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">w</span><span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># processor stats</span>
+<span style="color: rgb(0, 120, 0);">MPSTAT</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>mpstat<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># virtual memory stats</span>
+<span style="color: rgb(0, 120, 0);">VMSTAT</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">vmstat</span><span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># Top 20 memory hog applications</span>
+<span style="color: rgb(0, 120, 0);">PS_MEM</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">ps</span> <span style="color: rgb(102, 0, 51);">-A</span> <span style="color: rgb(102, 0, 51);">-o</span> pid,pcpu,pmem,start_time,state,<span style="color: rgb(0, 0, 0); font-weight: bold;">time</span>,<span style="color: rgb(194, 12, 185); font-weight: bold;">comm</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> <span style="color: rgb(194, 12, 185); font-weight: bold;">perl</span> <span style="color: rgb(102, 0, 51);">-e</span> <span style="color: rgb(255, 0, 0);">'($_ = join "",<>) =~ s/(\t)/     /g; print;'</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span><span style="color: rgb(194, 12, 185); font-weight: bold;">sort</span> <span style="color: rgb(102, 0, 51);">-g</span> <span style="color: rgb(102, 0, 51);">-k</span> <span style="color: rgb(0, 0, 0);">3</span> <span style="color: rgb(102, 0, 51);">-r</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> <span style="color: rgb(194, 12, 185); font-weight: bold;">head</span> -<span style="color: rgb(0, 0, 0);">20</span><span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># Top 10 CPU usage applications</span>
+<span style="color: rgb(0, 120, 0);">PS_CPU</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">ps</span> <span style="color: rgb(102, 0, 51);">-A</span> <span style="color: rgb(102, 0, 51);">-o</span> pid,pcpu,pmem,start_time,state,<span style="color: rgb(0, 0, 0); font-weight: bold;">time</span>,<span style="color: rgb(194, 12, 185); font-weight: bold;">comm</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> <span style="color: rgb(194, 12, 185); font-weight: bold;">perl</span> <span style="color: rgb(102, 0, 51);">-e</span> <span style="color: rgb(255, 0, 0);">'($_ = join "",<>) =~ s/(\t)/     /g; print;'</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> <span style="color: rgb(194, 12, 185); font-weight: bold;">sort</span> <span style="color: rgb(102, 0, 51);">-g</span> <span style="color: rgb(102, 0, 51);">-k</span> <span style="color: rgb(0, 0, 0);">2</span> <span style="color: rgb(102, 0, 51);">-r</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> <span style="color: rgb(194, 12, 185); font-weight: bold;">head</span> -<span style="color: rgb(0, 0, 0);">10</span><span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;">#  memory usage in MB</span>
+<span style="color: rgb(0, 120, 0);">FREE</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">free</span> -m<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+&nbsp;
+<span style="color: rgb(0, 120, 0);">PROCINFO</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>procinfo<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># iptables status</span>
+<span style="color: rgb(0, 120, 0);">IPTABLES</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>iptables -nL<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># established connections</span>
+<span style="color: rgb(0, 120, 0);">NETSTAT</span>=<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span><span style="color: rgb(194, 12, 185); font-weight: bold;">netstat</span> <span style="color: rgb(102, 0, 51);">-na</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span><span style="color: rgb(194, 12, 185); font-weight: bold;">grep</span> <span style="color: rgb(102, 0, 51);">-i</span> esta <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span><span style="color: rgb(194, 12, 185); font-weight: bold;">grep</span> <span style="color: rgb(102, 0, 51);">-v</span> 127.0.0.1 <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span><span style="color: rgb(194, 12, 185); font-weight: bold;">sort</span> <span style="color: rgb(102, 0, 51);">-n</span> -t. -k2<span style="color: rgb(0, 0, 0); font-weight: bold;">`</span>
+
+&nbsp;
+<span style="color: rgb(102, 102, 102); font-style: italic;"># line divider</span>
+<span style="color: rgb(0, 120, 0);">DL</span>=<span style="color: rgb(255, 0, 0);">"=================================================================================="</span>
+&nbsp;
+<span style="color: rgb(0, 120, 0);">FINAL</span>=<span style="color: rgb(255, 0, 0);">"<span style="color: rgb(0, 120, 0);">${DL}</span> 
+<span style="color: rgb(120, 0, 120);">`date`</span>
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+
+<span style="color: rgb(0, 120, 0);">${SERVER}</span> 
+<span style="color: rgb(0, 120, 0);">${DL}</span> 
+<span style="color: rgb(0, 120, 0);">${WHO}</span> 
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${FREE}</span>
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${MPSTAT}</span>
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${VMSTAT}</span> 
+
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${PROCINFO}</span>
+<span style="color: rgb(0, 120, 0);">${DL}</span> 
+Top 10 CPU processes
+<span style="color: rgb(0, 120, 0);">${PS_CPU}</span> 
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+Top 20 Memory processes
+<span style="color: rgb(0, 120, 0);">${PS_MEM}</span> 
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${IPTABLES}</span>
+
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+<span style="color: rgb(0, 120, 0);">${NETSTAT}</span>
+<span style="color: rgb(0, 120, 0);">${DL}</span>
+"</span>
+&nbsp;
+<span style="color: rgb(122, 8, 116); font-weight: bold;">echo</span> <span style="color: rgb(255, 0, 0);">"<span style="color: rgb(0, 120, 0);">${FINAL}</span>"</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> 
+  <span style="color: rgb(194, 12, 185); font-weight: bold;">perl</span> <span style="color: rgb(102, 0, 51);">-e</span> <span style="color: rgb(255, 0, 0);">'($_ = join "",<>) =~ s/(\t)/     /g; print;'</span> <span style="color: rgb(0, 0, 0); font-weight: bold;">|</span> 
+  sendEmail <span style="color: rgb(102, 0, 51);">-f</span> <span style="color: rgb(255, 0, 0);">"<span style="color: rgb(0, 120, 0);">${EMAIL_FROM}</span>"</span> <span style="color: rgb(102, 0, 51);">-u</span> <span style="color: rgb(255, 0, 0);">"<span style="color: rgb(0, 120, 0);">${SERVER}</span> comparator"</span> <span style="color: rgb(102, 0, 51);">-t</span> <span style="color: rgb(128, 0, 0);">${EMAIL_TO}</span>
+

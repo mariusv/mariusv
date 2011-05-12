@@ -1,0 +1,61 @@
+---
+layout: post
+title: Using multiuser sessions in GNU Screen
+categories: 
+- GNU
+- multiuser
+- screen
+- Tutorials
+---
+
+<a href="http://www.gnu.org/software/screen/">GNU Screen</a> is a fantastic utility; however, if you want to use multiuser sessions – that is to share your screen session with another user – you’ll have to set it up.
+
+
+p. First, you have to make sure that multiuser capabilities are in the screen binary.  We’ll assume for purposes of this article that screen has already been compiled with multiuser capabilities – it appears that most prepackaged versions of GNU screen should have these capabilities already built in.
+
+
+p. Make sure that the screen binary is properly configured to use the multiuser capabilities with these steps:
+
+
+<ul>
+<li>Make screen suid: @chmod u+s $(which screen)@.  This can be dangerous: you have to trust screen not to have anything in it (such as bugs) that will permit a user to take over as root.</li>
+<li>Make sure that the directory /var/run/screen exists and has permissions of 755.</li>
+
+</ul>
+p. Now that screen is set up, run the initial screen session and prep it for multiuser access:
+
+
+<ul>
+<li>As a regular user, run GNU screen.</li>
+<li>Start multiuser mode with the @multiuser on@ screen command.</li>
+<li>Allow a user to access the session by using the screen command @acladd user@ with the appropriate _user_ name or names.</li>
+
+</ul>
+p. Finally, the user who wants to access your screen session needs to run screen on the same system thusly:
+
+
+p. @screen -x shareduser/@
+
+
+p. This assumes that you ran the initial screen session as _shareduser_ – and don’t leave off the final slash as that is necessary to make this work.
+
+
+p. If you want to give this session a name (to separate it from your normal screen session perhaps), then use this command to start the session:
+
+
+p. @screen -S shared@
+
+
+p. Then let the other user use this command to connect:
+
+
+p. @screen -x shareduser/shared@
+
+
+
+p. That is, the user running the screen session is _shareduser_ and the session name is _shared_.
+
+
+p. There are more screen commands that are useful in multiuser mode; they are described the manual in <a href="http://www.gnu.org/software/screen/manual/screen.html#Multiuser-Session">section 8.4</a>.  There is also another web <a href="http://www.pixelbeat.org/docs/screen/">page</a> that provides some <a href="http://www.pixelbeat.org/docs/screen/">tips</a> on using screen, mostly focusing on multiuser mode – including how to create read-only users.
+
+

@@ -1,0 +1,22 @@
+---
+layout: post
+title: Ping a Specific Port
+permalink: http://www.mariusv.com/ping-a-specific-port/index.html
+post_id: 835
+categories: 
+- nmap
+- Personal
+- ping
+- ports
+- Tutorials
+---
+
+In the last 2 days I often heard the question: „_Can you ping a specific port of a machine, and if so, can you provide an example?_” and now I will answer to this question here.
+
+The answer is: 
+
+You can't ping ports, as Ping is using ICMP which doesn't have the concept of ports itself. Ports belong to the IP family of protocols (with TCP and UDP being its famous transport layer protocols). However, you could use nmap to see whether ports are open or not by nmap using this command:
+
+<pre>nmap -p 80 example.com or IP adress</pre>
+
+<a href="http://nmap.org/">Nmap</a> is more than just a ping-for-ports-thingy. It's the security auditers and hackers best friend and comes with tons of cool options. Check the *man* for all possible flags.

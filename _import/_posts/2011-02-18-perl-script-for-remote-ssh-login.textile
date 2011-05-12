@@ -1,0 +1,73 @@
+---
+layout: post
+title: Perl script for remote ssh login
+permalink: http://www.mariusv.com/perl-script-for-remote-ssh-login/index.html
+post_id: 800
+categories: 
+- perl
+- Perl scripts
+- ssh
+---
+
+It can be a bit tedious having to keep logging into remote servers to perform repeated tasks, so I have created a template script that allows me to configure a series of commands to be issued remotely.
+
+This script is just a basic login, do, and leave, but can be added-to for basic remote tasks.
+
+You’ll notice that the username and password is in plaintext, which is generally a no-no security-wise, but that can easily be sorted by generating a ssh keypair and adding your key to the server’s “known-hosts”. With this done you don’t need the password or username anymore.
+
+As I said, this just a basic, connect, do and leave, and relies on Expect and the Net::OpenSSH perl module.
+
+<pre lang="perl">#!/usr/bin/perl
+#######################################################################
+# PERL SCRIPT TO REMOTELY LOGIN VIA OPENSSH AND RUN COMMANDS
+# BY mariusv - http://www.mariusv.com
+#######################################################################
+use strict;
+use warnings;
+use Net::OpenSSH;
+use Expect;
+#######################################################################
+$| = 1;
+#######################################################################
+# LOGIN DETAILS (FOR BETTER SECURITY USE SSH KEY PAIRS)
+#######################################################################
+my $username = 'monkey';
+my $password = 'monkeymonkey';
+my $enable = 'monkeys';
+my $ip = '127.0.0.1';
+#######################################################################
+my $ssh = Net::OpenSSH->new("$username:$password\@$ip", timeout => 30);
+$ssh->error and die "unable to connect to remote host: ". $ssh->error;
+#ISSUE THE BASH COMMANDS YOU WANT TO PERFORM HERE ("......")
+my ($pty, $pid) = $ssh->open2pty("......")
+or die "unable to run remote command";
+my $expect = Expect->init($pty);
+$expect->raw_pty(1);
+#$expect->debug(2);
+my $debug and $expect->log_stdout(1);
+while(<$pty>) {
+print "$. $_"
+}</pre>
+
+To generate the ssh keys for passwordless logins, just do this:
+
+_[root@valhalla ~]# ssh-keygen -t dsa
+Generating public/private dsa key pair.
+Enter file in which to save the key (/root/.ssh/id_dsa): {Press Enter}
+Created directory ‘/root/.ssh’.
+Enter passphrase (empty for no passphrase): {Press Enter}
+Enter same passphrase again: {Press Enter}
+Your identification has been saved in /root/.ssh/id_dsa.
+Your public key has been saved in /root/.ssh/id_dsa.pub._
+
+Now login to the remote server:
+[root@valhalla ~]# ssh root@SERVER
+Password:
+[root@SERVER ~]# vim /root/.ssh/authorized_keys
+[root@valhalla ~]# vim /root/.ssh/id_dsa.pub
+Now just add YOU (.ssh/id_dsa.pub) key to SERVER (.ssh/authorized_keys)
+
+Now YOU can login to the SERVER without a password:
+[root@valhalla ~]# ssh root@SERVER
+
+That’s it. There are heaps of ways to have a Perl script login and issue commands, and there are also different types of security, this is just a basic script that gets it done quickly if you need to save some time with a few menial tasks.

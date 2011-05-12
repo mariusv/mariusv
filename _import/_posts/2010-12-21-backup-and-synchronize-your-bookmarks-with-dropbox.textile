@@ -1,0 +1,14 @@
+---
+layout: post
+title: Backup and Synchronize your Bookmarks with Dropbox
+permalink: http://www.mariusv.com/backup-and-synchronize-your-bookmarks-with-dropbox/index.html
+post_id: 688
+categories: 
+- dropbox
+- firefox
+- iceweasel
+- Tutorials
+---
+
+<a href="https://www.dropbox.com/referrals/NTQxNDE3MDA5?src=global0">Dropbox</a> is a great application for keeping your bookmarks of iceweasel ( or firefox ) at a safe spot.
+Type in your <a href="http://en.wikipedia.org/wiki/Address_bar">URL bar</a> _about:config_ and search for _browser.bookmarks.autoExportHTML_ . Doubleclick it so that the Value will become _true_. Now close iceweasel ( firefox ) and go to your profile folder ( check ~/.mozilla/firefox ). The profile folder xxxxxxxx.default  is the profile folder name for the default profile, where xxxxxxxx represents a random strung of characters. Their you will find a file bookmarks.html. Move this file to your Dropbox folder and create a softlink back to your profile folder. Everytime iceweasel ( firefox ) is closed the most recent bookmarks.html will be written to your Dropbox folder...

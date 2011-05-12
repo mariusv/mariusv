@@ -1,0 +1,14 @@
+---
+layout: post
+title: Help give an name
+permalink: http://www.mariusv.com/help-give-an-name/index.html
+post_id: 137
+categories: 
+- backup
+- bash
+- Personal
+- script
+- Technology
+---
+
+I need your HELP to give an name to my full backup script :D it is my very old script now i will resurrect him and i want to make the script public and for that I need an name :D

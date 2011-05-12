@@ -1,0 +1,38 @@
+---
+layout: post
+title: How to sync your djbdns zones with rsync
+permalink: http://www.mariusv.com/how-to-sync-your-djbdns-zones-with-rsync/index.html
+post_id: 221
+categories: 
+- djbdns
+- rsync
+- ssh
+- Tutorials
+- zones
+---
+
+I <a href="http://www.mariusv.com/how-to-djbdns/">wrote earlier</a> about publishing zones with <a href="http://cr.yp.to/djbdns.html">djbdns</a>. That post didnâ€™t cover zone sync between djbdns servers. This small guide assumes weâ€™ll be syncing all zones between two servers, s01 and s02.
+
+Doing this by using ssh keys instead of regular login has the benefit of not asking for your password when syncing the zones. You can skip this step if you want.
+
+On s01, do the following.
+
+<pre># ssh-keygen -t dsa
+# scp ~/.ssh/id_dsa.pub s02:.ssh/authorized_keys</pre>
+
+The edit the Makefile file in the root folder of djbdns on s01 and make it look like this.
+
+<pre>remote: data.cdb
+        /usr/bin/rsync -az -e ssh data.cdb s02:/etc/tinydns/root/data.cdb
+
+data.cdb: data
+        /usr/bin/tinydns-data</pre>
+
+Adjust all paths according to your own setup.
+
+Running make will now sync your zones to s02.
+
+<pre># make
+/usr/bin/tinydns-data
+/usr/bin/rsync -az -e ssh data.cdb s02:/etc/tinydns/root/data.cdb
+#</pre>

@@ -1,0 +1,11 @@
+---
+layout: post
+title: The English language in 24 accents
+categories: 
+- accents
+- english
+- Personal
+---
+
+This guy is brilliant, he can speak English with 24 different accents and he’s doing it pretty well. The actual thing starts at 1:00. Enjoy!
+<object width="540" height="290"><param name="movie" value="http://www.youtube.com/v/dABo_DCIdpM&hl=ro_RO&feature=player_embedded&version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.youtube.com/v/dABo_DCIdpM&hl=ro_RO&feature=player_embedded&version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="540" height="290"></embed></object>

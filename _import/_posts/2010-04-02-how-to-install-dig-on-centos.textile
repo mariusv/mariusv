@@ -1,0 +1,19 @@
+---
+layout: post
+title: How to install dig on CentOS
+permalink: http://www.mariusv.com/how-to-install-dig-on-centos/index.html
+post_id: 118
+categories: 
+- centos
+- dig
+- linux
+- Tutorials
+---
+
+Simple one this, but it could be hard to find if you donâ€™t know how!
+
+<pre>yum install bind-utils</pre>
+
+This will install dig, so you can ask name servers for various information!
+
+Happy digging! :)

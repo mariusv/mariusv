@@ -1,0 +1,24 @@
+---
+layout: post
+title: Find duplicate files
+permalink: http://www.mariusv.com/find-duplicate-files/index.html
+post_id: 491
+categories: 
+- bash
+- Bash scripts
+- duplicates
+- files
+- Tutorials
+---
+
+How to find those files that have different names but exactly the same content?
+
+You could install the good <a href="http://packages.debian.org/etch/fdupes">fdupes</a> or you could just reinvent the wheel with bash, md5sum and awk:
+<pre lang="bash">find path/ -type f | xargs md5sum | awk '{
+	sub("[^/]*/","",$2);
+	if (cache[$1])
+		print "Found: "cache[$1],$2;
+	else
+		cache[$1]=$2
+}'</pre>
+_path_ is where you want to search for duplicates. You can limit the search with the *find* maxdepth option.

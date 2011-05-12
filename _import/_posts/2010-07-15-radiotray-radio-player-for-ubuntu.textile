@@ -1,0 +1,12 @@
+---
+layout: post
+title: Radiotray radio player for Ubuntu
+permalink: http://www.mariusv.com/radiotray-radio-player-for-ubuntu/index.html
+post_id: 306
+categories: 
+- Personal
+- radiotray
+- ubuntu
+---
+
+<a href="http://www.mariusv.com/wp-content/uploads/2010/07/radiotray.png"><img src="http://www.mariusv.com/wp-content/uploads/2010/07/radiotray.png" alt="" title="radiotray" width="227" height="81" class="alignleft size-full wp-image-307" /></a> Just came across smart <a href="http://ubuntu.com">Ubuntu</a> online radio client:  <a href="http://radiotray.sourceforge.net/">radiotray</a>. As it comes from its name radiotray sits in Ubuntu’s system tray and just plays online radio (see the screenshot taken on my Ubuntu Lucid Lynx). You can of course stop playing or select different channel (there are four channels coming by default). I found this utility useful when working as it doesn’t required to keep in RAM such monster like amarok just for listening the radio. Nice and simple application.

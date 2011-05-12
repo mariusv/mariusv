@@ -1,0 +1,41 @@
+---
+layout: post
+title: Why VPS will take over the planet?
+categories: 
+- Personal
+- planet
+- Technology
+- vps
+---
+
+p. Virtual Private Servers (VPS) provide a chunk of computing power, coupled with storage space and networking.  Many commercial hosting providers offer “dedicated shared hosting”, meaning they split up a machine into multiple chunks and rent them out individually.  Often customers receive “root-level” access to their VPS, which are designed so that root in one VPS cannot touch another VPS running on the same hardware.
+
+
+p. Purchasing, racking, installing, obtaining support, patching, and overall managing of physical machines is not a web technology, nor does it deliver academic value to our clients.  *Web applications* built into an *academic portal* deliver academic value to clients.  If there was some way to run our web applications on air, we could focus solely on our direct commitment to students and faculty.
+
+
+p. As much as I would like to run our web applications on thin air, physical hardware is needed.
+
+
+
+p. This is where virtual private servers come in.   VPS, if managed by highly responsible system administrators, completely eliminates the need for application developers to think about the care and feeding of physical machines.  Instead, they get a reliable OS container that can move from one machine to another depending on hardware failures or changes in usage patterns.  They get consistent, standardized chunks of computing power, making their application run exactly the same regardless of what physical hardware supports it.
+
+
+p. I dig the idea of utility computing.  I think we’re approaching the point where the interface between a computing need and fulfillment is as simple as plugging a light into an outlet.
+
+
+p. If I need more CPU units to satisfy high end-of-quarter usage, I’d love to have a new server up and running in a few minutes, with minimal admin.  I would love to have spare CPU units ready to go at a moments notice.  I’d also love to share some of “our” CPU units back to the spare pool during usage lulls–or better yet, let this happen dynamically without me or our users noticing.
+
+
+p. Why would a computing department want to offer VPS as a service instead of letting each group manage their own physical machines?
+
+
+<ul>
+<li>Greater department efficiency: some clients can share the same physical machine.</li>
+<li>Simplified accounting: one chunk of computing power is the same as any other.</li>
+<li>Higher-level capacity planning: aggregate all future computing needs into a pool.</li>
+<li>Hardware cost savings: yearly bulk purchases for entire department instead of independent purchases.</li>
+
+</ul>
+p. The next question: how would this impact our organization?  What changes would we need to make?
+

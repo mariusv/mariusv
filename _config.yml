@@ -1,0 +1,16 @@
+permalink:    /:title
+analytics_id: UA-12405006-2
+title:        Marius Voila
+description:  Personal website of Marius Voila
+url:          http://mariusv.com
+# url:          http://0.0.0.0:4000
+author:       Marius Voila
+email:        myself@mariusv.com
+twitter:      http://twitter.com/abisdemon
+github:       http://github.com/mariusv
+lastfm:       http://last.fm/user/mariusvoila
+linkedin:     http://ro.linkedin.com/in/mariusvoila
+keywords:     design,development,software,linux,css,html,ruby,rails,blog,sysadmin
+comments:     true
+feed:         http://feeds.feedburner.com/mariusv
+ignore:       _blog, _posts/folio

@@ -1,0 +1,62 @@
+---
+layout: post
+title: System and Network Administrator's Tasks
+categories: 
+- job
+- network
+- Personal
+- sysadmin
+- work
+---
+
+I have been thinking about this, and came up with my own list of System/Network Admin truths. I struggled with the word truths, and instead of refering to my list as System and Network Admin truths, I see this list as a list of tasks or responsibilities that if maintained on a daily basis, will help System and Network Administrators to reduce downtime and ensure that they are better prepared to deal with issues when they occur.
+
+*Top 10 System and Network Administrator Tasks*
+
+1. *Backups are a requirement and are crucial to your success*
+ Eventually all hardware will fail, so be prepared
+ You need to create a backup strategy and backup all application data
+
+2. *Monitoring Tools*
+ Monitoring tools are different in all companies, however you need to invest in them and make them a requirement.
+ The Gartner Group estimates that system/network managers can manage about 30 servers per admin, we all know that this number varies depending on experience and maturity of the technology. Monitoring tools help this tremendously.
+ Monitor all applications, servers, and network connectivity
+ Establish performance baselines to help troubleshoot performance related problems.
+
+3. *Maintain Service Contracts with all vendors*
+ Maintenance contracts should be required for all production environments. That includes contracts for both hardware support and software support.
+
+4. *Maintain Version Control*
+ Version control is essential when troubleshooting issues. Vendors often fall back on the old line â€œWe fixed that in the latest release, please upgrade to the latest releaseâ€, so STAY CURRENT on all software products.
+
+5. *Consistent Hardware Builds and Software Installations*
+ Create a strategy that includes redundancy in all hardware builds
+ Consistency helps with maintenance and troubleshooting.
+ Document your builds and installations
+
+6. *Documentation*
+ Develop some standards surrounding documentation
+ Organize all of your documents and store them in a central place that can be accessed by all admins.
+ Document the backup process, document your monitoring process, document your vendors contact information, document your builds and installations, in the end, you will be glad that you did.
+
+7. *Communication*
+ Communication comes in many forms, memos, email, IM, voice mail, process and build documentation are all forms of communication.
+ Be consistent with your communication, and always re-read your emails before sending.
+ When there is a problem at 2:00am and you get paged, send a note to the group after resolving the issue, the little notes after problem resolutions go along way to teamwork and documentation.
+
+8. *Teamwork*
+ Teamwork is a subject that will not fit into four or five bullets, however it is critical to all IT operations.
+ Teamwork is about coming together, sharing together, working together, and succeeding together, especially in adversity.
+ Great teams and handle and work through the most difficult situations.
+
+9. *Training and Schooling*
+ Go back to school, work toward a degree, this will extend your career
+ If you already completed a degree program or if you are not interested in an undergraduate or graduate degree, then look into Technical Certificates.
+ If you are not interested in either a degree or certificate then do your best to stay current with Technology changes.
+
+10. *Stay Current with Technology*
+ A motivated individual looking to learn and grow, has many resources available on the Internet,
+ Read the Trade Rags, visit the Tech Web sites, Read Blogs, listen to podcasts, go to conferences.
+
+
+Finally, I hope that helps, please feel free to leave comments or questions.

@@ -1,0 +1,30 @@
+---
+layout: post
+title: Drunk or Tired
+permalink: http://www.mariusv.com/drunk-or-tired/index.html
+post_id: 181
+categories: 
+- code
+- drunk
+- Personal
+- sleep
+- sysadmin
+---
+
+p. As system administrator, the occasional all-nighter is necessary to fix things that go wrong. We also know that the majority of errors can be traced to human error â€“ including those that affect server stability.
+
+
+p. A recent <a href="http://ngm.nationalgeographic.com/2010/05/sleep/max-text">article</a> equates a lack of sleep to being drunk â€“ specifically, a 24-hour wake cycle is equivalent to a blood alcohol level of 0.1. This is _not_ good â€“ not at all.
+
+
+p. If we consider this fact, and expect that mistakes are very likely after 24 hours of being awake, then we must act. What can we do as system administrators when we work an all-nighter?
+
+
+<ul>
+<li>Take a nap. A small nap â€“ from 15 minutes to an hour â€“ can revitalize you and help you to minimize errors.</li>
+<li>Have a coworker check your work â€“ or work with you. Having someone to check your work will make a finer net whereby each of you can check the otherâ€™s work.</li>
+
+<li>Take an extended nap or sleeptime. For example, take off the day of an extended maintenance schedule â€“ or go to sleep at the end of the day and wake up hours later for maintenance (if it is scheduled for late at night).</li>
+</ul>
+p. In short, it is primarily about getting enough sleep. Finding ways to minimize errors or catch errors is good, but _never_ as good as getting enough sleep in the first place.
+

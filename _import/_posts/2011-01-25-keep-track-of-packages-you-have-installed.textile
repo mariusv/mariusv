@@ -1,0 +1,29 @@
+---
+layout: post
+title: Keep track of packages you have installed
+permalink: http://www.mariusv.com/keep-track-of-packages-you-have-installed/index.html
+post_id: 742
+categories: 
+- centos
+- debian
+- pakages
+- Tutorials
+---
+
+During development on a linux system, you probably install many packages using your favorite package manager. When you have to use a new system, or reimage your current one, it can be a pain to remember all the packages you had setup. One solution is to keep a list of the packages installed after the OS load, and then periodically generate a list of what has been added since.
+
+On a freshly installed system, create the starting baseline list of packages:
+
+<pre lang="bash"># On Debian based systems(Ubuntu):
+dpkg --get-selections > packages.txt
+ 
+# Or CentOS/Fedora:
+yum list installed > packages.txt</pre>
+
+You can run the command again at a later time, concatenating the output into a different file so you can view what has changed since the original system setup. Use a diff tool like diff3, vimdiff, or meld:
+<pre lang="bash">meld packages-old.txt packages.txt</pre>
+
+On Debian systems, once you have that file you can use it in a new or different system to mark packages to install using the *–set-selection parameter*:
+
+<pre lang="bash">dpkg --set-selections < packages.txt
+sudo apt-get upgrade</pre>

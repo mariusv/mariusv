@@ -1,0 +1,60 @@
+---
+layout: post
+title: Howto protect services like SSH against brute force using only IPtables
+categories: 
+- brute force
+- iptables
+- ssh
+- Technology
+- Tutorials
+---
+
+<a href="http://www.portknocking.org/">Port Knocking</a> is an approach that helps protecting your services ports from attacks the most famous brute forced would be SSH , the port knocking method depends that the client trying to connect will first attempt to connect to a predefined ports which will enable connection to your secured service port for 5 seconds , here is a simple script to set this kind of protection
+
+<pre lang="bash">#!/bin/sh
+#
+# Netfilter/IPtables - example of multiple-port knocking
+# Note: Knock ports 3456,2345,1234 to open SSH and MySQL ports for 5 seconds.
+# Nice thing to knock TCP with is `nc' program:
+# $> nc -w 1 <ip> 3456 ; nc -w 1 <ip> 2345 ; nc -w 1 <ip> 1234 ,ssh <ip>
+#
+# Change this to the name of the interface that provides your "uplink"
+# (connection to the Internet) or connection you want to protect.
+UPLINK="eth0"
+#
+# Comma seperated list of ports to protect with no spaces.
+SERVICES="22,3306"
+#
+# Location of iptables command
+IPTABLES='/sbin/iptables'
+#
+${IPTABLES} -N stage1
+${IPTABLES} -A stage1 -m recent --remove --name knock
+${IPTABLES} -A stage1 -p tcp --dport 3456 -m recent --set --name knock2
+
+${IPTABLES} -N stage2
+${IPTABLES} -A stage2 -m recent --remove --name knock2
+${IPTABLES} -A stage2 -p tcp --dport 2345 -m recent --set --name heaven
+
+${IPTABLES} -N door
+${IPTABLES} -A door -m recent --rcheck --seconds 5 --name knock2 -j stage2
+${IPTABLES} -A door -m recent --rcheck --seconds 5 --name knock -j stage1
+${IPTABLES} -A door -p tcp --dport 1234 -m recent --set --name knock
+
+${IPTABLES} -A INPUT -m --state ESTABLISHED,RELATED -j ACCEPT
+${IPTABLES} -A INPUT -p tcp --match multiport --dport ${SERVICES}  -i ${UPLINK} -m recent --rcheck --seconds 5 --name heaven -j ACCEPT
+${IPTABLES} -A INPUT -p tcp --syn -j door</pre>
+
+p. Some known pitfalls of port knocking are :
+
+
+p. 1- using consecutive port numbers like 100,200,300 which would cause the secured service port to be opened while using a port scanner like Nmap.
+
+
+p. 2- port knocking is not effective against replay attacks 
+
+
+p. 3- using port knocking as your sole line of defense, it has to be one of many .
+
+
+p. Some other famous scripts used for port knocking are <a href="http://www.cipherdyne.org/fwknop/">fwknop</a> and <a href="http://www.zeroflux.org/projects/knock">knockd</a>

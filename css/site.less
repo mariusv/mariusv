@@ -1,0 +1,570 @@
+---
+---
+
+/*
+Variables and mixins
+*/
+@base-link:#d40055;
+@lighter-grey:#ddd;
+@light-grey:#ccc;
+@lightish-grey:#999;
+@base-text-grey:#666;
+@dark-grey:#333;
+
+.rounded-corners (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.droidsans {
+  font-family: 'Droid Sans', arial, sans-serif; 
+}
+
+.droidserif {
+  font-family: "Droid Serif", serif;  
+}
+
+.helvetica {
+  font-family: "Helvetica Neue",Helvetica,Geneva,Verdana,Arial,sans-serif;
+}
+
+.rounded-image-border {
+   padding: 5px;
+   background: rgba(0,0,0,0.25);
+   .rounded-corners;
+   -webkit-transition: background 0.2s linear;
+   -moz-transition: background 0.2s linear;
+   transition: background 0.2s linear;
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#14000000,endColorstr=#14000000);
+   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#14000000,endColorstr=#14000000)";
+}
+
+.rounded-image-border-hover {
+  background: rgba(255,255,255,0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000)";
+}
+
+/*
+Layout: Deafult
+*/
+
+:focus {
+  outline: 1px dotted @base-text-grey;
+}
+
+html,body {
+  background-color:#fff;
+}
+
+html {
+  background-color: @lighter-grey;
+}
+
+#page {
+}
+
+p.first {
+  text-align: left;
+  font-size:2.3em;
+  line-height:1.3em;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+}
+
+p.second{
+  margin-top:0; 
+}
+
+.ampersand {
+  font-family: Baskerville, Palatino, "Book Antiqua", serif;
+  font-style: italic;
+  vertical-align:sub;
+}
+
+.first .ampersand {
+  vertical-align: baseline;
+}
+
+h2 .ampersand {
+  font-size:1.6em;
+  
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body,h1,h2,h3,h4,h5 {
+  font-size: 90%;
+  .helvetica;
+}
+
+body {
+  font-weight: 200;  
+  color: @base-text-grey;
+}
+
+h1,h2,h3,h4,h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 1em 0 0 0;
+  color: @dark-grey;
+}
+
+nav li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link,a:visited,a:active {
+  color: @base-link;
+}
+
+a:hover {
+  border-bottom: 1px dotted @base-link;
+}
+
+pre, code {
+  .rounded-corners(5px);
+  background-color:@lighter-grey;  
+}
+
+pre {
+  margin: 5px 0;
+  padding:10px;
+  overflow: auto;
+}
+
+code {
+  font-size: 0.8em;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+  padding:2px;
+}
+
+blockquote {
+  color: @base-text-grey;
+  font-size: 1.4em;
+  border-left: 1px solid @base-text-grey;
+  padding-left: 10px;
+}
+
+/*
+Layout: Post
+*/
+.post-title {
+  text-transform: none;
+}
+
+h2.post-title {
+  font-size: 1.5em;
+  margin: 1em 0 0 0;
+  font-weight: 300;
+}
+
+h3.post-title {
+  font-size: 1.2em;
+  margin: 1em 0 0.5em 0;
+  font-weight: 200;
+}
+
+.post.content {
+  border-top: 1px dotted @light-grey;
+  border-bottom: 1px dotted @light-grey;
+}
+.post.content.excerpt {
+  border-top: none;
+  border-bottom: none;
+  border-top: 1px dotted @light-grey;
+}
+.post.content.excerpt p {
+  margin-bottom: 0;
+  margin-top: 0.5em;
+}
+
+.post.byline {
+  color: @base-text-grey;
+  margin: 0.5em 0;
+  font-size: 0.9em;
+}
+
+.post.excerpt.read-more p,p a#comment-toggle {
+  font-size: 0.9em;
+  text-align: left;
+  margin: 0;
+}
+
+article.post.excerpt {
+  margin: 1em 0;
+}
+
+.post.content ul {
+  list-style-type: disc;
+  margin: 0 1.5em 1.5em 0;
+  padding-left: 1.5em;
+}
+
+img.bordered {
+  .rounded-image-border;
+}
+
+img.bordered:hover {
+  .rounded-image-border-hover;
+}
+
+img.post-float-left {
+  float: left;
+  margin: 10px 10px 10px 0;
+}
+img.post-float-right {
+  float: right;
+  margin: 10px 0 10px 10px;
+}
+
+/*
+Page: Index 
+*/
+/* Image is offset so tweak the div height */
+#dave-img {
+  height:210px;
+  
+}
+img#dave {
+  position:relative;
+  top:10px;
+}
+
+/*
+Include: Footer
+*/
+footer {
+  margin: 0;
+  padding: 0 0 5px 0;
+  font-size: 0.9em;
+  border-top: 1px solid @lightish-grey; 
+  background-color: @lighter-grey;
+}
+
+ul#contact-icons li {
+  margin:0;
+  display: block;
+}
+  
+ul#contact-icons img {
+ position:relative;
+ margin:0 10px 0 0px;
+ top:7px;
+}
+
+ul#contact-icons a.image-wrapper {
+  border-bottom:none;
+}
+
+footer h2 {
+  .droidserif;
+  font-weight: 400;
+}
+
+#copyright {
+  color: @base-text-grey;
+  font-size: 75%;
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+  border-top: 1px solid @lightish-grey;
+}
+
+footer ul {
+  margin-bottom: 1em;
+}
+
+footer li {
+  margin-bottom: 0.5em;
+}
+
+/*
+Include: Header
+*/
+header h1 {
+  text-transform: none;
+  font-size: 40px;
+  margin: 20px 0 10px 0;
+  vertical-align: bottom;
+  .droidsans;
+  font-weight: 400;
+  color:@dark-grey;
+  text-indent:-5px;
+}
+
+nav#main {
+  position: relative;
+}
+
+nav#main li {
+  float: right;
+  margin-left: 5px;
+  padding-top:20px;
+}
+
+nav#main a,nav#main .selected {
+  .droidsans;
+  padding: 0 10px;
+  display: block;
+  letter-spacing: 1px;
+/*  text-transform: uppercase;*/
+  font-size: 16px;  
+  font-weight: 400;
+  vertical-align: bottom;
+}   
+
+nav#main a:link,nav#main a:visited,nav#main a:active {
+  color: @lightish-grey;
+}
+
+nav#main a:hover {
+  color: @base-link;
+  border-bottom: none;
+}
+
+nav#main .selected {
+  color: @dark-grey;
+}
+
+/*
+Page: Notebook
+*/
+#post-archive-category-list { 
+  .rounded-corners(10px);
+  border: 1px solid @base-text-grey;
+  padding:7px 6px;
+  margin: 18px 0 20px 0;
+}
+
+#post-archive-category-list-desc p {
+ margin-top:0; 
+}
+
+#post-archive-category-list li a {
+  margin: 1em 0;
+  padding: 4px 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8em;
+  color:@dark-grey;
+  font-weight: 400;
+}
+
+#post-archive-category-list a.selected {
+  font-weight: 200;
+  color: #fff;
+  background-color: @dark-grey;
+  .rounded-corners(5px);
+}
+
+#post-archive-category-list a:hover {
+  color: @base-link;
+  border: none;
+}
+
+span.archive-listing-date {
+  float: right;
+  font-size: 0.9em;
+}
+
+nav#post-archive-list {
+  margin: 1em 0;
+}
+
+nav#post-archive-list a.title {
+  font-size: 1em;
+}
+
+/*
+Page : folio
+*/
+#folio {
+  
+}
+
+#fancybox-title h2 {
+}
+
+.folio-item {
+  border-bottom: 1px dotted @light-grey;
+  margin-bottom: 1em;
+  padding-bottom:1em;
+}
+
+.folio-item p {
+  font-size:0.9em;
+  width:400px;
+  margin:0 auto;
+  text-align: justify;
+}
+
+.folio-item.last {
+/*  border-bottom: none;
+  border-right: none;
+*/}
+
+.folio-item h2.title {
+  font-size: 1.2em;
+  font-weight: 300;
+  margin-top:0;
+  text-transform: none;
+  text-align: center;
+}
+
+.folio-item .byline {
+  font-size:0.9em;
+  color:@lightish-grey;
+  text-align: center;
+}
+
+img.folio-image {
+  display: block;
+  margin: 10px auto;
+}
+
+#folio a.folio-image {
+  border:none;
+}
+
+a.folio-image-wrapper {
+  border-bottom: none;
+}
+
+/*
+Page: About
+*/
+#disclaimer{
+  .rounded-corners(10px);
+  border: 1px solid @base-text-grey;
+  padding:10px;
+  margin:0 0 20px 0;
+}
+
+/* Image is offset so tweak the div height */
+#juggler-img {
+  height:200px;  
+}
+
+img#juggler {
+  position:relative;
+  top:-20px;
+}
+
+/* 
+Page: Colopohon
+*/
+#colophon li {
+  border-bottom: 1px dotted @light-grey;
+  padding: 0.5em 0;
+  width: 100%;
+}
+
+#colophon ul {
+  margin: 0.5em 0;
+}
+
+#colophon li.last {
+  border-bottom: none;
+}
+
+/*
+Comments
+*/
+#comments {
+  display: none;
+}
+
+
+/*
+Half court shot JS
+*/
+.hcs {
+  overflow: hidden;
+  text-align: left;
+  margin-top:5px;
+}
+
+.hcs ul,.hcs * {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style-type: none;
+}
+
+.hcs ul{
+  margin:10px auto 0 auto;
+}
+
+.hcs li {
+  width: 84px;
+  height: 63px;
+  position: relative;
+  display: block;
+  padding: 5px;
+  margin: 5px 5px 5px 0;
+  background: rgba(0,0,0,0.25);
+  -webkit-border-radius: 5px;
+  -webkit-transition: background 0.2s linear;
+  -moz-border-radius: 5px;
+  -moz-transition: background 0.2s linear;
+  border-radius: 5px;
+  transition: background 0.2s linear;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#14000000,endColorstr=#14000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#14000000,endColorstr=#14000000)";
+  display: table;
+  float: left;
+  vertical-align: middle;
+}
+
+.hcs li a {
+  width: 84px;
+  height: 63px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.hcs li:hover {
+  background: rgba(255,255,255,0.8);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000)";
+}
+.hcs img {
+  width: auto;
+  height: auto;
+  max-width: 84px;
+  max-height: 63px;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  font-size: 0;
+  float: left;
+}
+
+.hcs a:hover {
+  border-bottom: none;
+}
+
+/*
+Fancy Box fixes 
+*/
+a#fancybox-close {
+  border-bottom:none;
+}

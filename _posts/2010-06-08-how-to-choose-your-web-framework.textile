@@ -1,0 +1,18 @@
+---
+layout: post
+title: How to choose your web framework
+categories: 
+- code
+- frameworks
+- php
+- programming
+- sysadmin
+- Tutorials
+---
+
+Choose a web framework is a complicated issue. Evaluating different technical issues is mandatory. You need to bear in mind programming languages, ORM's, testing frameworks, how to make logging and so on. But other non-technical aspects like experience, kind of project and deadeline are important too. Performance and scalability are important, no doubt, but perhaps only is the application is growing up.
+
+Nowadays is easy to find different and good web frameworks like </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://rubyonrails.org/" rel="external">Rails</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">, </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://cakephp.org/" rel="external">CakePHP</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">, </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://codeigniter.com/" rel="external">CodeIgniter</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">, </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://turbogears.org/" rel="external">TurboGears</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">, </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://www.djangoproject.com" rel="external">Django</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">, </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://www.quixote.ca/" rel="external">Quixote</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"> or </span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;"><a target="_blank" href="http://www.springsource.org/" rel="external">Spring</a></span><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">. My personal advice is to evaluate two or three at least to take a right decision.
+
+Here you have a small summary with issues to bear in mind before choosing a web framework:
+</span><ul class="circle"><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Team's experience**: Developers and sysadmins.</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Hosting**: Is easy to find a good environment for my framewok?</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Scalability**: How to grow.</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Performance**: Cache, operating system, web server, database replication, high-performance, failure tolerance.</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Deployment options**: Apache (mod_php, mod_python), CGI, FastCGI, WSGI.</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Deadline**: Because time is important.</span></li><li><span style="font: 13px 'Lucida Grande',LucidaGrande,Verdana,sans-serif;">**Programming issues**: ORM, logging, testing, automatic deploy, different environments, SSL, validation, mailing, internationalization, web services, programming language, authentication, AJAX, third party libraries.</span>

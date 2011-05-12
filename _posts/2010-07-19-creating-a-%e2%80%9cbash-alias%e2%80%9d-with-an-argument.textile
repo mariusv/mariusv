@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Creating a "bash alias" with an argument"
+categories: 
+- alias
+- bash
+- sendmail
+- Tutorials
+---
+
+While setting up and testing the anti virus/spam filter of a mail server I usually send a lot of “test spam” to myself and that involves a pretty long line that needs to be typed in every time, and changed for every mail account i test. I want to make an alias for this using an argument containing the email address, but bash makes it hard if not impossible to do so with an alias. Fortunately it allows you to create an function instead.
+
+The command for sending a “GTUBE” test spam message is
+
+<pre>sendmail john@doe.com < /usr/share/doc/spamassassin/examples/sample-spam.txt</pre>
+
+To make this easier I wanted to make an alias for it, so I can type _sendspam "email -address"_ to send it. And as I mentioned earlier bash don’t allow you to use arguments in aliases. But making a function is just as easy. Add the following line in *~/.bashrc*
+
+<pre>sendspam () { sendmail "$1"  < /usr/share/doc/spamassassin/examples/sample-spam.txt; }</pre>
+
+After the next login you will now be able to use the following command to send a test spam message
+
+<pre>sendspam john@doe.com</pre>

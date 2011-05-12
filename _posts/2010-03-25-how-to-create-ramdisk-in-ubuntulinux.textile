@@ -1,0 +1,21 @@
+---
+layout: post
+title: How to create ramdisk in Ubuntu/Linux
+categories: 
+- disk
+- ram
+- Technology
+- Tutorials
+- ubuntu
+- VRD
+---
+
+I hope many of you will agree that sometimes it's really good idea to have some small amount of RAM mounted as a filesystem. It may be necessary when running some bash or perl script that handles, say, thousands of small files so it's much more effective not to waste computer resources on reading/writing data on hard disk but keep those files directly in memory. This idea is known as <a href="http://en.wikipedia.org/wiki/RAM_disk">Virtual RAM Drive</a> or *ramdisk* and can be setup in *Ubuntu* or almost any other *Linux* distribution using the following commands under root (to become root in Ubuntu use "sudo -s"):
+
+
+
+<pre># *mkdir /tmp/ramdisk; chmod 777 /tmp/ramdisk*
+
+# *mount -t tmpfs -o size=256M tmpfs /tmp/ramdisk/*</pre>
+p. where 256M is amount of RAM you wish to allocate for ramdisk. It's clear that this value should be *less than amount of free memory* (use "free -m"). BTW, if you specify too many MBs for ramdisk Linux will try to allocate it from RAM and then from swap so resulting performance would be very poor.
+

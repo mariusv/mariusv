@@ -1,0 +1,12 @@
+---
+layout: post
+title: What you think about the new face?
+categories: 
+- Personal
+- poll
+---
+
+<script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/4053887.js"></script>
+<noscript>
+	<a href="http://polldaddy.com/poll/4053887/">What you think about the new face?</a><span style="font-size:9px;"><a href="http://polldaddy.com/features-surveys/">customer surveys</a></span>
+</noscript>

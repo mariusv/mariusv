@@ -1,0 +1,34 @@
+---
+layout: post
+title: "Difference between SIGTERM & SIGKILL "
+categories: 
+- Personal
+- sigkill
+- sigterm
+- Tutorials
+---
+
+Sending signals to processes using <a href="http://en.wikipedia.org/wiki/Kill_(command)">kill</a> on a Unix system is not a new topic for most systems administrators, but I've been asked many times about the difference between _kill_ and _kill -9_.
+
+Anytime you use _kill_ on a process, you're actually sending the process a signal (in almost all situations - I'll get into that soon). Standard C applications have a <a href="http://en.wikipedia.org/wiki/Signal.h">header file</a> that contains the steps that the process should follow if it receives a particular signal. You can get an entire list of the available signals on your system by checking the man page for _kill_.
+
+Consider a command like this:
+
+<pre>kill 2563</pre>
+
+This would send a signal called <a href="http://en.wikipedia.org/wiki/SIGTERM">SIGTERM</a> to the process.  Once the process receives the notice, a few different things can happen:
+
+<ul><li>the process may stop immediately</li><li>the process may stop after a short delay after cleaning up resources</li><li>the process may keep running indefinitely</li></ul>p. The application can determine what it wants to do once a SIGTERM is received.  While most applications will clean up their resources and stop, some may not.  An application may be configured to do something completely different when a SIGTERM is received.  Also, if the application is in a bad state, such as waiting for disk I/O, it may not be able to act on the signal that was sent.
+
+p. Most system administrators will usually resort to the more abrupt signal when an application doesn't respond to a SIGTERM:
+
+
+
+<pre>kill -9 2563</pre>
+
+The _-9_ tells the _kill_ command that you want to send signal #9, which is called <a href="http://en.wikipedia.org/wiki/SIGKILL">SIGKILL</a>. With a name like that, it's obvious that this signal carries a little more weight.
+
+Although SIGKILL is defined in the same signal header file as SIGTERM, it cannot be ignored by the process.  In fact, the process isn't even made aware of the SIGKILL signal since the signal goes straight to <del datetime="2010-03-18T18:02:01+00:00">the kernel- init.  At that point, init will stop the process.  The process never gets the opportunity to catch the signal and act on it.
+
+p. However, the kernel may not be able to successfully kill the process in some situations.  If the process is waiting for network or disk I/O, the kernel won't be able to stop it. <a href="http://en.wikipedia.org/wiki/Zombie_process">Zombie processes</a> and processes caught in an <a href="http://en.wikipedia.org/wiki/Uninterruptible_sleep">uninterruptible sleep</a> cannot be stopped by the kernel, either.  A reboot is required to clear those processes from the system.
+
